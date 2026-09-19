@@ -1,5 +1,6 @@
 // ==========================================================================
 // BUNYOD PLATFORMASI - HAYOT BALANSI G'ILDIRAGI VA PSIXOLOGIK TEST
+// Tabiiy, xotirjam va ishonchli ranglar bilan chizilgan radar diagrammasi
 // ==========================================================================
 
 import { multilingualLifeWheel, multilingualQuiz } from './data.js';
@@ -94,7 +95,7 @@ class DiagnosticsManager {
     const height = this.canvas.height;
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = Math.min(centerX, centerY) - 40;
+    const radius = Math.min(centerX, centerY) - 36;
     const areas = this.getAreas();
     const numPoints = areas.length;
     const angleStep = (Math.PI * 2) / numPoints;
@@ -103,7 +104,8 @@ class DiagnosticsManager {
 
     ctx.clearRect(0, 0, width, height);
 
-    ctx.strokeStyle = isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)';
+    // 1. To'r halqalari (Konsentrik doiralar / ko'pburchaklar)
+    ctx.strokeStyle = isLight ? 'rgba(30, 45, 65, 0.1)' : 'rgba(160, 180, 200, 0.12)';
     ctx.lineWidth = 1;
     for (let level = 2; level <= 10; level += 2) {
       const r = (radius / 10) * level;
@@ -119,6 +121,7 @@ class DiagnosticsManager {
       ctx.stroke();
     }
 
+    // 2. Markazdan nurlar
     for (let i = 0; i < numPoints; i++) {
       const angle = i * angleStep - Math.PI / 2;
       const x = centerX + Math.cos(angle) * radius;
@@ -127,10 +130,11 @@ class DiagnosticsManager {
       ctx.beginPath();
       ctx.moveTo(centerX, centerY);
       ctx.lineTo(x, y);
-      ctx.strokeStyle = isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)';
+      ctx.strokeStyle = isLight ? 'rgba(30, 45, 65, 0.1)' : 'rgba(160, 180, 200, 0.12)';
       ctx.stroke();
     }
 
+    // 3. Foydalanuvchi ma'lumotlari poligoni (Tabiiy dengiz va zaytun yashili)
     ctx.beginPath();
     areas.forEach((area, i) => {
       const angle = i * angleStep - Math.PI / 2;
@@ -144,15 +148,21 @@ class DiagnosticsManager {
     ctx.closePath();
 
     const polyGradient = ctx.createRadialGradient(centerX, centerY, 10, centerX, centerY, radius);
-    polyGradient.addColorStop(0, isLight ? 'rgba(180, 140, 45, 0.35)' : 'rgba(212, 175, 55, 0.35)');
-    polyGradient.addColorStop(1, isLight ? 'rgba(61, 106, 69, 0.25)' : 'rgba(124, 169, 130, 0.25)');
+    if (isLight) {
+      polyGradient.addColorStop(0, 'rgba(35, 77, 112, 0.28)');
+      polyGradient.addColorStop(1, 'rgba(48, 101, 71, 0.22)');
+    } else {
+      polyGradient.addColorStop(0, 'rgba(50, 100, 141, 0.35)');
+      polyGradient.addColorStop(1, 'rgba(65, 122, 91, 0.28)');
+    }
     ctx.fillStyle = polyGradient;
     ctx.fill();
 
-    ctx.strokeStyle = isLight ? '#9c7b22' : '#d4af37';
+    ctx.strokeStyle = isLight ? '#234d70' : '#417a5b';
     ctx.lineWidth = 2.5;
     ctx.stroke();
 
+    // 4. Nuqtalar
     areas.forEach((area, i) => {
       const angle = i * angleStep - Math.PI / 2;
       const r = (radius / 10) * area.defaultScore;
@@ -163,7 +173,7 @@ class DiagnosticsManager {
       ctx.arc(x, y, 4.5, 0, Math.PI * 2);
       ctx.fillStyle = '#ffffff';
       ctx.fill();
-      ctx.strokeStyle = isLight ? '#9c7b22' : '#d4af37';
+      ctx.strokeStyle = isLight ? '#234d70' : '#32648d';
       ctx.lineWidth = 2;
       ctx.stroke();
     });
@@ -193,13 +203,13 @@ class DiagnosticsManager {
         <div style="text-align: left; padding: 18px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--border-hairline); margin-top: 20px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
             <strong style="color: var(--text-pure); font-size: 15px;">${l.title}: ${avg} / 10</strong>
-            <span style="color: var(--gold-champagne); font-weight: 600; font-size: 13px;">${avg >= 7 ? l.harmony : l.needsWork}</span>
+            <span style="color: var(--trust-blue); font-weight: 700; font-size: 13px;">${avg >= 7 ? l.harmony : l.needsWork}</span>
           </div>
-          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 6px;">
-            ${l.strength}: <strong style="color: var(--sage-accent);">${topArea.name} (${topArea.defaultScore})</strong>
+          <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 6px;">
+            ${l.strength}: <strong style="color: var(--nature-green);">${topArea.name} (${topArea.defaultScore})</strong>
           </p>
-          <p style="font-size: 13px; color: var(--text-secondary);">
-            ${l.grow}: <strong style="color: var(--gold-champagne);">${lowestArea.name} (${lowestArea.defaultScore})</strong>. 
+          <p style="font-size: 13.5px; color: var(--text-secondary);">
+            ${l.grow}: <strong style="color: var(--earth-warm);">${lowestArea.name} (${lowestArea.defaultScore})</strong>. 
             ${lowestArea.desc}.
           </p>
         </div>
@@ -296,14 +306,14 @@ class DiagnosticsManager {
 
     const cur = resData[lang] || resData.uz;
     let chosen = cur.low;
-    let badgeColor = "var(--sage-accent)";
+    let badgeColor = "var(--nature-green)";
 
     if (totalScore > 7) {
       chosen = cur.high;
-      badgeColor = "#f43f5e";
+      badgeColor = "var(--earth-warm)";
     } else if (totalScore > 3) {
       chosen = cur.mid;
-      badgeColor = "var(--gold-champagne)";
+      badgeColor = "var(--trust-blue)";
     }
 
     resultCard.classList.add('visible');

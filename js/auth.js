@@ -173,6 +173,19 @@ class AuthManager {
     }
   }
 
+  saveUserData(key, val) {
+    this.setUserData(key, val);
+  }
+
+  addXP(amount) {
+    const current = this.getUserData('xp', 170);
+    const updated = current + amount;
+    this.setUserData('xp', updated);
+    if (window.refreshDashboard) {
+      window.refreshDashboard();
+    }
+  }
+
   getGuestTempData() {
     return {
       xp: JSON.parse(sessionStorage.getItem('bunyod_guest_xp') || '170'),

@@ -1,40 +1,51 @@
 /* ==========================================================================
-   BUNYOD PLATFORMASI - SAMIMIY, ODDIY VA XALQONA DIZAYN TIZIMI
-   Shriftlar: Yumshoq, qo'rqitmaydigan, o'qish juda oson va mehmondo'st (Nunito & Plus Jakarta Sans)
-   Rejimlar: Tungi (Dark) va Kunduzgi (Light)
+   BUNYOD PLATFORMASI - TABIIY, ISHONCHLI VA ESTETIK PSIXOLOGIK PALITRA
+   Ranglar psixologiyasi:
+   - Dengiz / Ko'k gumbaz (Trust & Wisdom): #244b6c, #1a364e - xotirjamlik, ishonch, sadoqat
+   - Tabiiy Adaçayı / Zaytun (Sage & Nature): #36694e, #28523c - yangilanish, ruhiy shifo, salomatlik
+   - Iliq Tuproq / Terrakota (Clay & Warm Earth): #b45e3c - samimiyat, insoniylik, iliqlik
+   - O'qish foni: Iliq zig'irpoya / Qog'oz (Linen / Soft Canvas)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* TUNGI REJIM (DARK THEME - DEFAULT) */
-  --bg-canvas: #0c1017;
-  --bg-card: rgba(20, 26, 38, 0.72);
-  --bg-card-hover: rgba(26, 34, 48, 0.88);
-  --bg-elevated: #161e2c;
-  --bg-glass: rgba(16, 22, 34, 0.78);
+  /* TUNGI REJIM (DARK THEME - TO'Q YASHIL VA QORA, SOF OQ MATNLAR) */
+  --bg-canvas: #090e0b;
+  --bg-card: rgba(16, 26, 20, 0.82);
+  --bg-card-hover: rgba(22, 36, 28, 0.95);
+  --bg-elevated: #142018;
+  --bg-glass: rgba(14, 22, 17, 0.88);
 
   --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(212, 175, 55, 0.35);
-  --border-focus: rgba(212, 175, 55, 0.65);
+  --border-hover: rgba(45, 106, 79, 0.5);
+  --border-focus: rgba(45, 106, 79, 0.8);
 
-  --gold-champagne: #d4af37;
-  --gold-warm: #c5a059;
-  --gold-soft: rgba(212, 175, 55, 0.14);
-  --gold-glow: rgba(212, 175, 55, 0.14);
+  /* To'q yashil, oq va qora uyg'unligi */
+  --nature-green: #2d6a4f;
+  --nature-green-dark: #1b4332;
+  --nature-green-soft: rgba(45, 106, 79, 0.2);
 
-  --sage-accent: #7ca982;
-  --sage-soft: rgba(124, 169, 130, 0.15);
+  --trust-blue: #1b4332;
+  --trust-blue-dark: #143527;
+  --trust-blue-soft: rgba(27, 67, 50, 0.25);
+
+  --earth-warm: #40916c;
+  --earth-warm-dark: #2d6a4f;
+  --earth-warm-soft: rgba(64, 145, 108, 0.18);
+
+  /* Fallback aliases for backward compatibility */
+  --gold-champagne: var(--nature-green);
+  --sage-accent: var(--nature-green);
 
   --text-pure: #ffffff;
-  --text-primary: #f3f5f9;
-  --text-secondary: #a1abbb;
-  --text-tertiary: #6d788b;
+  --text-primary: #f0f5f2;
+  --text-secondary: #9cb1a5;
+  --text-tertiary: #6b8074;
 
-  --input-bg: rgba(0, 0, 0, 0.28);
-  --nav-bg: rgba(12, 16, 23, 0.88);
+  --input-bg: rgba(9, 14, 11, 0.5);
+  --nav-bg: rgba(9, 14, 11, 0.92);
 
-  /* Xalqqa mos, samimiy va yumshoq shriftlar */
   --font-friendly: 'Nunito', system-ui, sans-serif;
   --font-sans: 'Plus Jakarta Sans', 'Nunito', system-ui, sans-serif;
 
@@ -44,48 +55,54 @@
   --radius-lg: 24px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.22);
-  --shadow-elevated: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
-  --shadow-gold-subtle: 0 8px 30px rgba(212, 175, 55, 0.14);
+  --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.28);
+  --shadow-elevated: 0 14px 36px -8px rgba(0, 0, 0, 0.45);
 
-  --transition-gentle: 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-fast: 0.15s ease;
+  --transition-gentle: 0.22s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.14s ease;
 }
 
-/* KUNDUZGI REJIM (LIGHT THEME) */
+/* KUNDUZGI REJIM (LIGHT THEME - SOF OQ FON, TO'Q YASHIL VA QORA) */
 [data-theme="light"] {
-  --bg-canvas: #f6f5f0;
-  --bg-card: rgba(255, 255, 255, 0.9);
-  --bg-card-hover: #ffffff;
+  --bg-canvas: #f8faf9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f2f7f4;
   --bg-elevated: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.94);
+  --bg-glass: rgba(255, 255, 255, 0.95);
 
-  --border-hairline: rgba(20, 28, 45, 0.08);
-  --border-hover: rgba(180, 140, 45, 0.45);
-  --border-focus: rgba(180, 140, 45, 0.7);
+  --border-hairline: rgba(11, 17, 14, 0.09);
+  --border-hover: rgba(27, 67, 50, 0.35);
+  --border-focus: rgba(27, 67, 50, 0.65);
 
-  --gold-champagne: #9c7b22;
-  --gold-warm: #85671a;
-  --gold-soft: rgba(180, 140, 45, 0.12);
-  --gold-glow: rgba(180, 140, 45, 0.14);
+  --nature-green: #1b4332;
+  --nature-green-dark: #143527;
+  --nature-green-soft: rgba(27, 67, 50, 0.08);
 
-  --sage-accent: #3d6a45;
-  --sage-soft: rgba(61, 106, 69, 0.12);
+  --trust-blue: #1b4332;
+  --trust-blue-dark: #143527;
+  --trust-blue-soft: rgba(27, 67, 50, 0.08);
 
-  --text-pure: #121620;
-  --text-primary: #212735;
-  --text-secondary: #576174;
-  --text-tertiary: #7d8798;
+  --earth-warm: #2d6a4f;
+  --earth-warm-dark: #1b4332;
+  --earth-warm-soft: rgba(45, 106, 79, 0.1);
 
-  --input-bg: rgba(240, 238, 230, 0.75);
-  --nav-bg: rgba(246, 245, 240, 0.92);
+  /* Fallback aliases */
+  --gold-champagne: var(--nature-green);
+  --sage-accent: var(--nature-green);
 
-  --shadow-subtle: 0 4px 20px rgba(30, 35, 50, 0.05);
-  --shadow-elevated: 0 16px 40px -10px rgba(30, 35, 50, 0.08);
-  --shadow-gold-subtle: 0 8px 30px rgba(180, 140, 45, 0.12);
+  --text-pure: #090e0b;
+  --text-primary: #121c16;
+  --text-secondary: #3d5045;
+  --text-tertiary: #687e72;
+
+  --input-bg: #eef3f0;
+  --nav-bg: rgba(255, 255, 255, 0.94);
+
+  --shadow-subtle: 0 4px 18px rgba(9, 14, 11, 0.06);
+  --shadow-elevated: 0 14px 36px -8px rgba(9, 14, 11, 0.1);
 }
 
-/* Asosiy Reset */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -105,18 +122,16 @@ body {
   min-height: 100vh;
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(124, 169, 130, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(30, 41, 59, 0.06) 0%, transparent 70%);
+    radial-gradient(ellipse at 15% 0%, rgba(45, 106, 79, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(27, 67, 50, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(20, 53, 39, 0.04) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.68;
-  letter-spacing: 0;
   overflow-x: hidden;
   transition: background-color var(--transition-gentle);
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -125,14 +140,13 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(150, 150, 150, 0.22);
+  background: rgba(120, 140, 160, 0.25);
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-champagne);
+  background: var(--trust-blue);
 }
 
-/* Tipografiya - Qirrasiz, yumshoq va samimiy */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-friendly);
   color: var(--text-pure);
@@ -166,18 +180,17 @@ button {
   outline: none;
 }
 
-/* Container */
 .container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 28px;
 }
 
-/* Minimalist va qulay karta */
+/* Card Minimal */
 .card-minimal {
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-subtle);
@@ -195,45 +208,51 @@ button {
   top: 0;
   z-index: 100;
   background: var(--nav-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border-hairline);
-  padding: 13px 0;
+  padding: 11px 0;
   transition: background-color var(--transition-gentle), border-color var(--transition-gentle);
+}
+
+.site-header .container {
+  max-width: 100%;
+  padding: 0 24px;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
+  width: 100%;
 }
 
 .brand-area {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .brand-monogram {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--gold-warm);
+  background: var(--nature-green);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-friendly);
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 800;
-  color: var(--gold-champagne);
-  background: var(--gold-soft);
-  box-shadow: var(--shadow-gold-subtle);
+  box-shadow: 0 3px 10px rgba(48, 101, 71, 0.25);
 }
 
 .brand-info h1 {
   font-family: var(--font-friendly);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.02em;
   color: var(--text-pure);
@@ -241,33 +260,34 @@ button {
 }
 
 .brand-info span {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold-champagne);
-  opacity: 0.9;
+  color: var(--nature-green);
 }
 
 .nav-pill-group {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   background: var(--bg-card);
-  padding: 5px;
+  padding: 4px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-hairline);
+  flex-shrink: 1;
 }
 
 .nav-link-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 16px;
+  gap: 6px;
+  padding: 7px 12px;
   border-radius: var(--radius-full);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
+  white-space: nowrap;
   transition: all var(--transition-gentle);
 }
 
@@ -277,7 +297,7 @@ button {
   stroke: currentColor;
   fill: none;
   stroke-width: 2;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .nav-link-btn:hover {
@@ -285,13 +305,13 @@ button {
 }
 
 .nav-link-btn.active {
-  color: #0b0e14;
-  background: linear-gradient(135deg, #f5ebd0, #d4af37);
+  color: #ffffff;
+  background: var(--trust-blue);
   font-weight: 700;
-  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 2px 10px rgba(27, 67, 50, 0.3);
 }
 .nav-link-btn.active svg {
-  stroke: #0b0e14;
+  stroke: #ffffff;
   opacity: 1;
 }
 
@@ -299,7 +319,8 @@ button {
 .header-controls-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .lang-dropdown-wrapper {
@@ -322,7 +343,7 @@ button {
 
 .lang-select-btn:hover {
   border-color: var(--border-hover);
-  color: var(--gold-champagne);
+  color: var(--trust-blue);
 }
 
 .lang-select-btn svg {
@@ -367,12 +388,12 @@ button {
 }
 
 .lang-item-btn:hover {
-  background: var(--gold-soft);
-  color: var(--gold-champagne);
+  background: var(--trust-blue-soft);
+  color: var(--trust-blue);
 }
 
 .lang-item-btn.active {
-  color: var(--gold-champagne);
+  color: var(--trust-blue);
   font-weight: 700;
 }
 
@@ -390,7 +411,7 @@ button {
 }
 
 .theme-toggle-btn:hover {
-  color: var(--gold-champagne);
+  color: var(--nature-green);
   border-color: var(--border-hover);
 }
 
@@ -412,50 +433,75 @@ button {
 .meta-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px 12px;
+  gap: 4px;
+  padding: 5px 10px;
   border-radius: var(--radius-full);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   border: 1px solid var(--border-hairline);
   background: var(--bg-card);
+  white-space: nowrap;
 }
 
 .meta-pill.streak {
-  color: var(--gold-champagne);
-  border-color: rgba(212, 175, 55, 0.25);
-  background: var(--gold-soft);
+  color: var(--earth-warm);
+  border-color: rgba(180, 94, 60, 0.25);
+  background: var(--earth-warm-soft);
 }
 .meta-pill.streak svg {
   width: 13px;
   height: 13px;
-  fill: var(--gold-champagne);
+  fill: var(--earth-warm);
 }
 
 .meta-pill.xp {
-  color: var(--sage-accent);
-  border-color: rgba(124, 169, 130, 0.25);
-  background: var(--sage-soft);
+  color: var(--nature-green);
+  border-color: rgba(54, 105, 78, 0.25);
+  background: var(--nature-green-soft);
 }
 
-/* Samimiy va qulay tugmalar */
-.btn-gold-elegant {
+/* Tabiiy, samimiy va ishonchli tugmalar (No flashy metallic gradients) */
+.btn-gold-elegant,
+.btn-trust,
+.btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 11px 24px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #f5ebd0, #d4af37);
-  color: #111520;
+  background: var(--trust-blue);
+  color: #ffffff;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 14px rgba(35, 77, 112, 0.25);
   transition: all var(--transition-gentle);
 }
-.btn-gold-elegant:hover {
+.btn-gold-elegant:hover,
+.btn-trust:hover,
+.btn-primary:hover {
+  background: var(--trust-blue-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.32);
+  box-shadow: 0 6px 18px rgba(35, 77, 112, 0.35);
+}
+
+.btn-nature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  background: var(--nature-green);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(48, 101, 71, 0.25);
+  transition: all var(--transition-gentle);
+}
+.btn-nature:hover {
+  background: var(--nature-green-dark);
+  transform: translateY(-1px);
 }
 
 .btn-outline-elegant {
@@ -474,14 +520,14 @@ button {
 }
 .btn-outline-elegant:hover {
   border-color: var(--border-hover);
-  color: var(--gold-champagne);
+  color: var(--nature-green);
 }
 
 /* Bo'limlar */
 .view-panel {
   display: none;
-  animation: elegantFade 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 34px 0 85px;
+  animation: elegantFade 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 32px 0 80px;
 }
 
 .view-panel.active {

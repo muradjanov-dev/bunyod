@@ -10,6 +10,7 @@ import { tasksManager } from './tasks.js';
 import { diagnosticsManager } from './diagnostics.js';
 import { breathingManager } from './breathing.js';
 import { dashboardManager } from './dashboard.js';
+import { booksManager } from './books.js';
 
 class BunyodApp {
   constructor() {
@@ -33,10 +34,11 @@ class BunyodApp {
     diagnosticsManager.init();
     breathingManager.init();
     dashboardManager.init();
+    booksManager.init();
 
     // Hash orqali navigatsiya
     const hash = window.location.hash.replace('#', '');
-    if (hash && ['home', 'courses', 'tasks', 'diagnostics', 'calm', 'dashboard'].includes(hash)) {
+    if (hash && ['home', 'courses', 'books', 'tasks', 'diagnostics', 'calm', 'dashboard'].includes(hash)) {
       this.navigateTo(hash);
     } else {
       this.navigateTo('home');
@@ -86,9 +88,11 @@ class BunyodApp {
       if (viewName === 'diagnostics') {
         setTimeout(() => diagnosticsManager.drawWheel(), 50);
       }
+      if (viewName === 'books') {
+        booksManager.renderBooks();
+      }
       if (viewName === 'dashboard') {
-        dashboardManager.renderProfileCard();
-        dashboardManager.renderMetrics();
+        dashboardManager.renderDashboard();
       }
     }
   }
@@ -274,7 +278,7 @@ class BunyodApp {
         pointer-events: auto;
       `;
       toast.innerHTML = `
-        <span style="color: var(--gold-champagne);">✦</span>
+        <span style="color: var(--trust-blue);">✦</span>
         <span>${msg}</span>
       `;
       toastContainer.appendChild(toast);

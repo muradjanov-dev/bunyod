@@ -19,10 +19,12 @@ class DashboardManager {
   init() {
     this.renderProfileCard();
     this.renderMetrics();
+    this.renderBookOrders();
 
     i18nManager.onLanguageChange(() => {
       this.renderProfileCard();
       this.renderMetrics();
+      this.renderBookOrders();
     });
   }
 
@@ -98,7 +100,7 @@ class DashboardManager {
               </span>
             </div>
             <p>${user.email}</p>
-            <small style="font-size: 12px; color: ${isGuest ? 'var(--gold-champagne)' : 'var(--sage-accent)'};">
+            <small style="font-size: 12px; color: ${isGuest ? 'var(--earth-warm)' : 'var(--nature-green)'};">
               ${isGuest ? i18nManager.t('profile_guest_notice') : i18nManager.t('profile_save_notice')}
             </small>
           </div>
@@ -200,7 +202,7 @@ class DashboardManager {
 
     badgesContainer.innerHTML = badges.map(b => `
       <div class="achievement-badge ${b.unlocked ? 'unlocked' : ''}">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="${b.unlocked ? 'var(--gold-champagne)' : 'none'}" stroke="currentColor" stroke-width="2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="${b.unlocked ? 'var(--nature-green)' : 'none'}" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="8" r="7"></circle>
           <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
         </svg>
@@ -208,11 +210,58 @@ class DashboardManager {
       </div>
     `).join('');
   }
+
+  renderBookOrders() {
+    const ordersContainer = document.getElementById('dashboardOrdersContainer');
+    if (!ordersContainer) return;
+
+    const orders = authManager.getUserData('bookOrders', []);
+    if (orders.length === 0) {
+      ordersContainer.innerHTML = `
+        <div style="text-align: center; padding: 24px 16px; color: var(--text-tertiary); font-size: 13.5px;">
+          <div style="font-size: 28px; margin-bottom: 6px;">📦</div>
+          <p>${i18nManager.t('dashboard_no_orders')}</p>
+          <button class="btn-outline-elegant" style="margin-top: 12px; font-size: 13px;" onclick="window.navigateTo('books')">
+            ${i18nManager.t('nav_books')}
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    ordersContainer.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 12px;">
+        ${orders.map(o => `
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-sm); background: var(--bg-canvas); border: 1px solid var(--border-hairline); flex-wrap: wrap; gap: 10px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <strong style="color: var(--text-pure); font-size: 15px;">${o.bookTitle}</strong>
+                <span style="font-size: 11.5px; background: var(--nature-green-soft); color: var(--nature-green); padding: 2px 8px; border-radius: var(--radius-full); font-weight: 700;">${o.quantity} dona</span>
+              </div>
+              <p style="font-size: 12.5px; color: var(--text-secondary); margin: 2px 0 0;">Buyurtma: #${o.id} • ${o.date} • ${o.deliveryAddress}</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <strong style="color: var(--text-pure); font-size: 15px;">${o.totalPrice}</strong>
+              <span style="font-size: 12px; padding: 4px 12px; border-radius: var(--radius-full); background: rgba(45, 106, 79, 0.15); color: var(--nature-green); font-weight: 700; border: 1px solid rgba(45, 106, 79, 0.3);">
+                ${o.status}
+              </span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  renderDashboard() {
+    this.renderProfileCard();
+    this.renderMetrics();
+    this.renderBookOrders();
+  }
 }
 
 export const dashboardManager = new DashboardManager();
 window.addXP = (amt) => dashboardManager.addXP(amt);
 window.refreshDashboard = () => {
-  dashboardManager.renderProfileCard();
-  dashboardManager.renderMetrics();
+  dashboardManager.renderDashboard();
 };
+

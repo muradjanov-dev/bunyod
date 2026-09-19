@@ -1,74 +1,530 @@
 /* ==========================================================================
-   BUNYOD PLATFORMASI - MOBIL VA PLANSHET MOSLASHUVCHANLIGI (RESPONSIVE)
+   BUNYOD PLATFORMASI - TO'LIQ MOBIL VA PLANSHET MOSLASHUVCHANLIGI (RESPONSIVE)
+   Qamrov: Kichik smartfonlar (320px - 480px), Planshetlar (768px - 1024px), Desktop
    ========================================================================== */
 
-@media (max-width: 1024px) {
-  .learning-studio-grid {
-    grid-template-columns: 1fr;
+/* --- LAPTOP VA O'RTA EKRANLAR (MAX-WIDTH: 1240px) --- */
+@media (max-width: 1240px) {
+  .site-header .container {
+    padding: 0 16px;
   }
-  
-  .diagnostics-duo-layout {
-    grid-template-columns: 1fr;
+  .nav-link-btn {
+    padding: 6px 10px;
+    font-size: 12.5px;
+    gap: 5px;
   }
-  
-  .dashboard-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-link-btn svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
-@media (max-width: 768px) {
+/* --- PLANSHETLAR VA O'RTA EKRANLAR (MAX-WIDTH: 1024px) --- */
+@media (max-width: 1024px) {
+  .brand-info span {
+    display: none;
+  }
+
+  .user-meta-pills .meta-pill.streak,
+  .user-meta-pills .meta-pill.xp {
+    display: none;
+  }
+
+  .nav-link-btn {
+    padding: 6px 8px;
+    font-size: 11.5px;
+  }
+
   .container {
-    padding: 0 18px;
+    padding: 0 20px;
   }
 
-  .header-inner {
-    flex-wrap: wrap;
-    gap: 14px;
-    justify-content: center;
-  }
-
-  .nav-pill-group {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    overflow-x: auto;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .quote-master-card {
-    padding: 28px 20px 24px;
-  }
-
-  .quote-body-text {
-    font-size: 20px;
-    min-height: 100px;
-  }
-
-  .features-trio {
+  .learning-studio-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .tasks-container-grid {
-    grid-template-columns: 1fr;
+  .syllabus-sidebar {
+    order: 2;
   }
 
-  .quiz-options-group {
+  .diagnostics-duo-layout {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .dashboard-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .quote-body-text {
+    font-size: 22px;
+  }
+}
+
+/* --- MOBIL QURILMALAR (MAX-WIDTH: 860px) --- */
+@media (max-width: 860px) {
+  :root {
+    --radius-lg: 18px;
+    --radius-md: 14px;
+  }
+
+  body {
+    padding-bottom: 74px; /* Mobil pastki navigatsiya uchun joy */
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Header - Ixcham mobil ko'rinish */
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .brand-area {
+    gap: 10px;
+  }
+
+  .brand-monogram {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .brand-info h1 {
+    font-size: 19px;
+  }
+
+  .brand-info span {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Yuqori navigatsiya pill bar - mobil pastki app-bar ga aylanadi */
+  .nav-pill-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg-elevated);
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-hairline);
+    padding: 6px 4px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .nav-link-btn {
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 2px;
+    padding: 5px 2px;
+    font-size: 9.5px;
+    font-weight: 700;
+    border-radius: var(--radius-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-link-btn span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-link-btn svg {
+    width: 17px;
+    height: 17px;
+    margin: 0 auto;
+  }
+
+  .nav-link-btn.active {
+    box-shadow: none;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Header boshqaruv elementlari (Til, Rejim, Profil) */
+  .header-controls-group {
+    gap: 6px;
+  }
+
+  .lang-select-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .theme-toggle-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .user-meta-pills .meta-pill.streak,
+  .user-meta-pills .meta-pill.xp {
+    display: none; /* Mobilda joyni tejash uchun pastki kabinetda ko'rsatiladi */
+  }
+
+  #headerProfileBtn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+  }
+
+  /* Hero Bo'limi */
+  .hero-section {
+    padding: 16px 0 32px;
+  }
+
+  .hero-tagline {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  /* Iqtibos Kartasi */
+  .quote-master-card {
+    padding: 22px 18px 20px;
+    margin-bottom: 28px;
+    border-radius: var(--radius-md);
+  }
+
+  .quote-header-meta {
+    margin-bottom: 16px;
+  }
+
+  .quote-category-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .quote-body-text {
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 65px;
+    margin-bottom: 18px;
+  }
+
+  .author-credentials {
+    gap: 10px;
+  }
+
+  .author-monogram {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .author-names h5 {
+    font-size: 13.5px;
+  }
+
+  .author-names p {
+    font-size: 11.5px;
+  }
+
+  .quote-nav-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Asosiy 3 xususiyat kartalari */
+  .features-trio {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .feature-mini-card {
+    padding: 20px 18px;
+  }
+
+  /* CTA tugmalari */
+  .hero-section div[style*="display: flex; justify-content: center; gap: 16px;"] {
+    flex-direction: column;
+    gap: 10px !important;
+    margin-top: 28px !important;
+  }
+
+  .btn-gold-elegant, .btn-outline-elegant {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Kurslar & Video Studio */
+  .section-main-title {
+    font-size: 24px;
+  }
+
+  .course-switcher {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+  .course-switcher::-webkit-scrollbar {
+    display: none;
+  }
+
+  .course-tab-btn {
+    padding: 7px 16px;
+    font-size: 13px;
+    flex-shrink: 0;
   }
 
   .lesson-meta-bar {
     flex-direction: column;
-    align-items: stretch;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .lesson-details-text h2 {
+    font-size: 18px;
   }
 
   .lesson-action-pills {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .complete-status-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+
+  .lesson-sub-tabs {
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 12px;
+  }
+  .lesson-sub-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sub-tab-btn {
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 12px 4px;
+  }
+
+  .sub-content-panel {
+    padding: 18px 16px;
+  }
+
+  /* Vazifalar */
+  .tasks-container-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .task-card {
+    padding: 20px 16px;
+  }
+
+  /* Diagnostika */
+  .wheel-canvas-box {
+    padding: 20px 16px;
+  }
+
+  #lifeWheelCanvas {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+  }
+
+  .wheel-slider-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .wheel-slider-row label {
+    width: 100%;
+    flex: none;
+    font-size: 13px;
+  }
+  .wheel-slider-row input[type="range"] {
+    flex: 1;
+  }
+
+  .quiz-card-box {
+    padding: 20px 16px;
+  }
+
+  .quiz-options-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Sokinlik / Nafas */
+  .calm-zone-container {
+    padding: 30px 18px;
+  }
+
+  .calm-zone-container .serif-title {
+    font-size: 28px !important;
+  }
+
+  .breathing-stage {
+    width: 230px;
+    height: 230px;
+    margin: 24px 0;
+  }
+
+  .breathing-orb-core {
+    width: 120px;
+    height: 120px;
+  }
+
+  .breath-phase-title {
+    font-size: 20px;
+  }
+
+  /* Kabinet */
+  .guest-alert-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .user-profile-header-card {
+    flex-direction: column;
     align-items: flex-start;
+    padding: 18px 16px;
+    gap: 16px;
+  }
+
+  .user-profile-header-card > div:last-child {
+    width: 100%;
+  }
+  .user-profile-header-card .btn-gold-elegant,
+  .user-profile-header-card .btn-outline-elegant {
+    width: 100%;
+  }
+
+  .dashboard-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .metric-stat-card {
+    padding: 16px 14px;
+  }
+
+  .metric-stat-card h3 {
+    font-size: 22px;
+  }
+
+  /* Auth Modali */
+  .auth-modal-box {
+    padding: 26px 20px;
+    border-radius: var(--radius-md);
+  }
+  /* Kitoblar bo'limi - Mobil moslashuv */
+  .books-toolbar-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .books-categories-group {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .books-categories-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .book-search-box {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .book-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .book-modal-box {
+    padding: 22px 18px;
+    width: 95%;
+  }
+
+  .payment-methods-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- KICHIK SMARTFONLAR (MAX-WIDTH: 360px) --- */
+@media (max-width: 360px) {
+  .dashboard-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .quote-body-text {
+    font-size: 16px;
+  }
+
+  .brand-info h1 {
+    font-size: 17px;
+  }
+
+  .nav-link-btn {
+    font-size: 8.5px;
   }
 }
