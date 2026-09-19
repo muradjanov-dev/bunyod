@@ -1,0 +1,500 @@
+/* ==========================================================================
+   BUNYOD PLATFORMASI - SAMIMIY, ODDIY VA XALQONA DIZAYN TIZIMI
+   Shriftlar: Yumshoq, qo'rqitmaydigan, o'qish juda oson va mehmondo'st (Nunito & Plus Jakarta Sans)
+   Rejimlar: Tungi (Dark) va Kunduzgi (Light)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* TUNGI REJIM (DARK THEME - DEFAULT) */
+  --bg-canvas: #0c1017;
+  --bg-card: rgba(20, 26, 38, 0.72);
+  --bg-card-hover: rgba(26, 34, 48, 0.88);
+  --bg-elevated: #161e2c;
+  --bg-glass: rgba(16, 22, 34, 0.78);
+
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(212, 175, 55, 0.35);
+  --border-focus: rgba(212, 175, 55, 0.65);
+
+  --gold-champagne: #d4af37;
+  --gold-warm: #c5a059;
+  --gold-soft: rgba(212, 175, 55, 0.14);
+  --gold-glow: rgba(212, 175, 55, 0.14);
+
+  --sage-accent: #7ca982;
+  --sage-soft: rgba(124, 169, 130, 0.15);
+
+  --text-pure: #ffffff;
+  --text-primary: #f3f5f9;
+  --text-secondary: #a1abbb;
+  --text-tertiary: #6d788b;
+
+  --input-bg: rgba(0, 0, 0, 0.28);
+  --nav-bg: rgba(12, 16, 23, 0.88);
+
+  /* Xalqqa mos, samimiy va yumshoq shriftlar */
+  --font-friendly: 'Nunito', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Nunito', system-ui, sans-serif;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.22);
+  --shadow-elevated: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
+  --shadow-gold-subtle: 0 8px 30px rgba(212, 175, 55, 0.14);
+
+  --transition-gentle: 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.15s ease;
+}
+
+/* KUNDUZGI REJIM (LIGHT THEME) */
+[data-theme="light"] {
+  --bg-canvas: #f6f5f0;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.94);
+
+  --border-hairline: rgba(20, 28, 45, 0.08);
+  --border-hover: rgba(180, 140, 45, 0.45);
+  --border-focus: rgba(180, 140, 45, 0.7);
+
+  --gold-champagne: #9c7b22;
+  --gold-warm: #85671a;
+  --gold-soft: rgba(180, 140, 45, 0.12);
+  --gold-glow: rgba(180, 140, 45, 0.14);
+
+  --sage-accent: #3d6a45;
+  --sage-soft: rgba(61, 106, 69, 0.12);
+
+  --text-pure: #121620;
+  --text-primary: #212735;
+  --text-secondary: #576174;
+  --text-tertiary: #7d8798;
+
+  --input-bg: rgba(240, 238, 230, 0.75);
+  --nav-bg: rgba(246, 245, 240, 0.92);
+
+  --shadow-subtle: 0 4px 20px rgba(30, 35, 50, 0.05);
+  --shadow-elevated: 0 16px 40px -10px rgba(30, 35, 50, 0.08);
+  --shadow-gold-subtle: 0 8px 30px rgba(180, 140, 45, 0.12);
+}
+
+/* Asosiy Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-friendly);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--transition-gentle), color var(--transition-gentle);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  background-image: 
+    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(124, 169, 130, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(30, 41, 59, 0.06) 0%, transparent 70%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.68;
+  letter-spacing: 0;
+  overflow-x: hidden;
+  transition: background-color var(--transition-gentle);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.22);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-champagne);
+}
+
+/* Tipografiya - Qirrasiz, yumshoq va samimiy */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-friendly);
+  color: var(--text-pure);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.serif-title {
+  font-family: var(--font-friendly);
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-friendly);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Container */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Minimalist va qulay karta */
+.card-minimal {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-gentle);
+}
+
+.card-minimal:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* Header & Navigatsiya */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 13px 0;
+  transition: background-color var(--transition-gentle), border-color var(--transition-gentle);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-monogram {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-friendly);
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--gold-champagne);
+  background: var(--gold-soft);
+  box-shadow: var(--shadow-gold-subtle);
+}
+
+.brand-info h1 {
+  font-family: var(--font-friendly);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--text-pure);
+  line-height: 1.1;
+}
+
+.brand-info span {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-champagne);
+  opacity: 0.9;
+}
+
+.nav-pill-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-card);
+  padding: 5px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-hairline);
+}
+
+.nav-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-gentle);
+}
+
+.nav-link-btn svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  opacity: 0.8;
+}
+
+.nav-link-btn:hover {
+  color: var(--text-pure);
+}
+
+.nav-link-btn.active {
+  color: #0b0e14;
+  background: linear-gradient(135deg, #f5ebd0, #d4af37);
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.25);
+}
+.nav-link-btn.active svg {
+  stroke: #0b0e14;
+  opacity: 1;
+}
+
+/* Header Controls */
+.header-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-dropdown-wrapper {
+  position: relative;
+}
+
+.lang-select-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.lang-select-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--gold-champagne);
+}
+
+.lang-select-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  min-width: 150px;
+  box-shadow: var(--shadow-elevated);
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 200;
+}
+
+.lang-dropdown-menu.visible {
+  display: flex;
+  animation: elegantFade 0.2s ease;
+}
+
+.lang-item-btn {
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: left;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang-item-btn:hover {
+  background: var(--gold-soft);
+  color: var(--gold-champagne);
+}
+
+.lang-item-btn.active {
+  color: var(--gold-champagne);
+  font-weight: 700;
+}
+
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--gold-champagne);
+  border-color: var(--border-hover);
+}
+
+.theme-toggle-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* User Meta Pills */
+.user-meta-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+}
+
+.meta-pill.streak {
+  color: var(--gold-champagne);
+  border-color: rgba(212, 175, 55, 0.25);
+  background: var(--gold-soft);
+}
+.meta-pill.streak svg {
+  width: 13px;
+  height: 13px;
+  fill: var(--gold-champagne);
+}
+
+.meta-pill.xp {
+  color: var(--sage-accent);
+  border-color: rgba(124, 169, 130, 0.25);
+  background: var(--sage-soft);
+}
+
+/* Samimiy va qulay tugmalar */
+.btn-gold-elegant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #f5ebd0, #d4af37);
+  color: #111520;
+  font-size: 14.5px;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);
+  transition: all var(--transition-gentle);
+}
+.btn-gold-elegant:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.32);
+}
+
+.btn-outline-elegant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bg-card);
+  transition: all var(--transition-gentle);
+}
+.btn-outline-elegant:hover {
+  border-color: var(--border-hover);
+  color: var(--gold-champagne);
+}
+
+/* Bo'limlar */
+.view-panel {
+  display: none;
+  animation: elegantFade 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 34px 0 85px;
+}
+
+.view-panel.active {
+  display: block;
+}
+
+@keyframes elegantFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

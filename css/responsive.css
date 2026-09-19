@@ -1,0 +1,74 @@
+/* ==========================================================================
+   BUNYOD PLATFORMASI - MOBIL VA PLANSHET MOSLASHUVCHANLIGI (RESPONSIVE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .learning-studio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .diagnostics-duo-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .nav-pill-group {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .quote-master-card {
+    padding: 28px 20px 24px;
+  }
+
+  .quote-body-text {
+    font-size: 20px;
+    min-height: 100px;
+  }
+
+  .features-trio {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-options-group {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-meta-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lesson-action-pills {
+    align-items: flex-start;
+  }
+}
