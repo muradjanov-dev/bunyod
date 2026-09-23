@@ -15,7 +15,7 @@
   gap: 8px;
   padding: 6px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(65, 122, 91, 0.3);
+  border: 1px solid rgba(255, 107, 0, 0.3);
   background: var(--nature-green-soft);
   color: var(--nature-green);
   font-size: 13px;
@@ -97,7 +97,7 @@
   padding: 4px 14px;
   border-radius: var(--radius-full);
   background: var(--nature-green-soft);
-  border: 1px solid rgba(65, 122, 91, 0.25);
+  border: 1px solid rgba(255, 107, 0, 0.25);
 }
 
 .quote-action-btns {
@@ -257,7 +257,7 @@
 }
 .feature-icon-badge.sage {
   background: var(--nature-green-soft);
-  border-color: rgba(65, 122, 91, 0.25);
+  border-color: rgba(255, 107, 0, 0.25);
   color: var(--nature-green);
 }
 
@@ -790,7 +790,7 @@
 .task-status-tag.done {
   background: var(--nature-green-soft);
   color: var(--nature-green);
-  border: 1px solid rgba(65, 122, 91, 0.25);
+  border: 1px solid rgba(255, 107, 0, 0.25);
 }
 
 .task-prompt-text {
@@ -819,7 +819,7 @@
   padding: 12px 16px;
   border-radius: var(--radius-sm);
   background: var(--nature-green-soft);
-  border: 1px solid rgba(65, 122, 91, 0.2);
+  border: 1px solid rgba(255, 107, 0, 0.2);
   font-size: 13px;
   color: var(--text-primary);
   display: none;
@@ -981,14 +981,14 @@
   width: 140px;
   height: 140px;
   border-radius: var(--radius-full);
-  background: radial-gradient(circle, rgba(50, 100, 141, 0.4) 0%, rgba(65, 122, 91, 0.2) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(50, 100, 141, 0.4) 0%, rgba(255, 107, 0, 0.2) 70%, transparent 100%);
   border: 2px solid var(--nature-green);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 4s ease;
-  box-shadow: 0 0 30px rgba(65, 122, 91, 0.25);
+  box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
 }
 
 .breathing-orb-core.expand {
@@ -998,7 +998,7 @@
 
 .breathing-orb-core.hold {
   transform: scale(1.55);
-  box-shadow: 0 0 65px rgba(65, 122, 91, 0.45);
+  box-shadow: 0 0 65px rgba(255, 107, 0, 0.45);
 }
 
 .breathing-orb-core.contract {
@@ -1117,7 +1117,7 @@
 .profile-status-pill.registered {
   background: var(--nature-green-soft);
   color: var(--nature-green);
-  border: 1px solid rgba(65, 122, 91, 0.3);
+  border: 1px solid rgba(255, 107, 0, 0.3);
 }
 
 .profile-status-pill.guest {
@@ -1184,7 +1184,7 @@
 }
 
 .achievement-badge.unlocked {
-  border-color: rgba(65, 122, 91, 0.35);
+  border-color: rgba(255, 107, 0, 0.35);
   background: var(--nature-green-soft);
   color: var(--nature-green);
   font-weight: 700;
@@ -1369,7 +1369,7 @@
   color: #ffffff;
   border-color: var(--nature-green);
   font-weight: 700;
-  box-shadow: 0 3px 12px rgba(27, 67, 50, 0.25);
+  box-shadow: 0 3px 12px rgba(255, 107, 0, 0.25);
 }
 
 .book-search-box {
@@ -1428,8 +1428,8 @@
 }
 
 .book-card.top-featured-book {
-  border-color: rgba(45, 106, 79, 0.45);
-  box-shadow: 0 8px 24px rgba(27, 67, 50, 0.15);
+  border-color: rgba(255, 122, 24, 0.45);
+  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
 }
 
 .book-top-badge {
@@ -1707,7 +1707,7 @@
 /* Buyurtma Formasi */
 .order-modal-recap {
   background: var(--nature-green-soft);
-  border: 1px solid rgba(45, 106, 79, 0.25);
+  border: 1px solid rgba(255, 122, 24, 0.25);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
   display: flex;
@@ -1821,8 +1821,8 @@
   margin: 36px auto 0;
   padding: 36px 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.45) 0%, rgba(14, 22, 17, 0.95) 100%), var(--bg-card);
-  border: 1px solid rgba(45, 106, 79, 0.35);
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.45) 0%, rgba(12, 12, 16, 0.95) 100%), var(--bg-card);
+  border: 1px solid rgba(255, 122, 24, 0.35);
   box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -1846,7 +1846,7 @@
   display: inline-block;
   font-size: 12.5px;
   font-weight: 800;
-  color: #52b788;
+  color: #ff7a18;
   letter-spacing: 0.04em;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -1889,7 +1889,7 @@
 .mini-stat-num {
   font-size: 28px;
   font-weight: 800;
-  color: #52b788;
+  color: #ff7a18;
   line-height: 1;
 }
 
@@ -1930,7 +1930,7 @@
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
 }
 
 .author-title-sub {
@@ -1965,8 +1965,8 @@
 }
 
 .passport-central-question-box {
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.35) 0%, rgba(14, 22, 17, 0.85) 100%), var(--bg-card);
-  border: 1px solid rgba(45, 106, 79, 0.45);
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.35) 0%, rgba(12, 12, 16, 0.85) 100%), var(--bg-card);
+  border: 1px solid rgba(255, 122, 24, 0.45);
   padding: 24px 30px;
   border-radius: var(--radius-md);
   margin: 0 auto;
@@ -1975,7 +1975,7 @@
 }
 
 .passport-central-question-box .question-icon {
-  color: #52b788;
+  color: #ff7a18;
   font-size: 18px;
   margin-bottom: 6px;
   display: block;
@@ -2010,9 +2010,9 @@
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #52b788;
+  color: #ff7a18;
   background: var(--nature-green-soft);
-  border: 1px solid rgba(45, 106, 79, 0.25);
+  border: 1px solid rgba(255, 122, 24, 0.25);
   padding: 4px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 12px;
@@ -2065,8 +2065,8 @@
 
 .symptom-tag.hidden-root {
   background: var(--nature-green-soft);
-  color: #52b788;
-  border: 1px solid rgba(45, 106, 79, 0.25);
+  color: #ff7a18;
+  border: 1px solid rgba(255, 122, 24, 0.25);
 }
 
 .symptom-card h4 {
@@ -2079,7 +2079,7 @@
 .root-divider-arrow {
   text-align: center;
   font-size: 18px;
-  color: #52b788;
+  color: #ff7a18;
   margin: 6px 0 12px;
   font-weight: 800;
 }
@@ -2131,7 +2131,7 @@
 }
 
 .flow-sep {
-  color: #52b788;
+  color: #ff7a18;
   font-weight: 800;
   font-size: 15px;
 }
@@ -2166,7 +2166,7 @@
   background: var(--nature-green);
   color: #ffffff;
   border-color: var(--nature-green);
-  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.4);
+  box-shadow: 0 4px 14px rgba(255, 122, 24, 0.4);
 }
 
 .passport-nav-pill .pill-number {
@@ -2185,7 +2185,7 @@
   margin: 0 auto;
   padding: 36px 40px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(45, 106, 79, 0.3);
+  border: 1px solid rgba(255, 122, 24, 0.3);
 }
 
 .nav-q-badge {
@@ -2198,8 +2198,8 @@
 .q-tag-num {
   font-size: 12px;
   font-weight: 800;
-  color: #52b788;
-  background: rgba(45, 106, 79, 0.2);
+  color: #ff7a18;
+  background: rgba(255, 122, 24, 0.2);
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -2207,7 +2207,7 @@
 .q-tag-text {
   font-size: 12.5px;
   font-weight: 700;
-  color: #52b788;
+  color: #ff7a18;
   text-transform: uppercase;
 }
 
@@ -2232,7 +2232,7 @@
   background: rgba(255, 255, 255, 0.02);
   padding: 18px 22px;
   border-radius: var(--radius-sm);
-  border-left: 3px solid #52b788;
+  border-left: 3px solid #ff7a18;
   margin-bottom: 24px;
 }
 
@@ -2278,7 +2278,7 @@
 
 .paradox-item.full-span {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.25) 0%, rgba(14, 22, 17, 0.6) 100%), var(--bg-card);
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.25) 0%, rgba(12, 12, 16, 0.6) 100%), var(--bg-card);
 }
 
 .paradox-side {
@@ -2300,7 +2300,7 @@
 }
 
 .paradox-side.right {
-  color: #52b788;
+  color: #ff7a18;
   text-align: left;
 }
 
@@ -2330,8 +2330,8 @@
   padding: 24px 30px;
   text-align: center;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.25) 0%, rgba(14, 22, 17, 0.8) 100%), var(--bg-card);
-  border: 1px solid rgba(45, 106, 79, 0.35);
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.25) 0%, rgba(12, 12, 16, 0.8) 100%), var(--bg-card);
+  border: 1px solid rgba(255, 122, 24, 0.35);
 }
 
 .creed-quote-banner .creed-icon {
@@ -2369,14 +2369,14 @@
 }
 
 .chain-step-card.highlight {
-  border-color: rgba(45, 106, 79, 0.6);
-  background: linear-gradient(135deg, rgba(27, 67, 50, 0.3) 0%, var(--bg-card) 100%);
+  border-color: rgba(255, 122, 24, 0.6);
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, var(--bg-card) 100%);
 }
 
 .chain-step-card .step-num {
   font-size: 12px;
   font-weight: 800;
-  color: #52b788;
+  color: #ff7a18;
   display: block;
   margin-bottom: 4px;
 }
@@ -2398,7 +2398,7 @@
 .chain-arrow-symbol {
   font-size: 20px;
   font-weight: 800;
-  color: #52b788;
+  color: #ff7a18;
 }
 
 @media (max-width: 768px) {
@@ -2463,7 +2463,7 @@
   height: 44px;
   border-radius: 50%;
   background: var(--nature-green-soft);
-  color: #52b788;
+  color: #ff7a18;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2479,7 +2479,7 @@
 .persona-card-quote {
   font-size: 13.5px;
   font-style: italic;
-  color: #52b788;
+  color: #ff7a18;
   margin: 0;
 }
 
@@ -2513,14 +2513,14 @@
 
 .dim-tag:hover {
   color: var(--text-pure);
-  border-color: #52b788;
+  border-color: #ff7a18;
   background: var(--nature-green-soft);
 }
 
 .dim-tag.highlight {
-  background: rgba(45, 106, 79, 0.25);
-  color: #52b788;
-  border-color: rgba(45, 106, 79, 0.5);
+  background: rgba(255, 122, 24, 0.25);
+  color: #ff7a18;
+  border-color: rgba(255, 122, 24, 0.5);
   font-weight: 700;
 }
 
@@ -2531,8 +2531,8 @@
   padding: 44px 40px;
   text-align: center;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(45, 106, 79, 0.4);
-  background: radial-gradient(circle at center, rgba(27, 67, 50, 0.3) 0%, rgba(14, 22, 17, 0.95) 100%), var(--bg-card);
+  border: 1px solid rgba(255, 122, 24, 0.4);
+  background: radial-gradient(circle at center, rgba(255, 107, 0, 0.3) 0%, rgba(12, 12, 16, 0.95) 100%), var(--bg-card);
 }
 
 .creed-badge {
@@ -2540,7 +2540,7 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #52b788;
+  color: #ff7a18;
   margin-bottom: 12px;
 }
 
@@ -2566,7 +2566,7 @@
 .tavfiq-notice {
   font-size: 14px;
   font-weight: 700;
-  color: #52b788;
+  color: #ff7a18;
   letter-spacing: 0.05em;
 }
 

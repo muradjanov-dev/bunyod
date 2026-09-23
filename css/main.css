@@ -1,50 +1,48 @@
 /* ==========================================================================
-   BUNYOD PLATFORMASI - TABIIY, ISHONCHLI VA ESTETIK PSIXOLOGIK PALITRA
-   Ranglar psixologiyasi:
-   - Dengiz / Ko'k gumbaz (Trust & Wisdom): #244b6c, #1a364e - xotirjamlik, ishonch, sadoqat
-   - Tabiiy Adaçayı / Zaytun (Sage & Nature): #36694e, #28523c - yangilanish, ruhiy shifo, salomatlik
-   - Iliq Tuproq / Terrakota (Clay & Warm Earth): #b45e3c - samimiyat, insoniylik, iliqlik
-   - O'qish foni: Iliq zig'irpoya / Qog'oz (Linen / Soft Canvas)
+   BUNYOD PLATFORMASI - ESTETIK & MINIMALISTIK PALITRA
+   Oq, Olovrang (Flame-Orange) va Qora (Obsidian Black) uyg'unligi
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* TUNGI REJIM (DARK THEME - TO'Q YASHIL VA QORA, SOF OQ MATNLAR) */
-  --bg-canvas: #090e0b;
-  --bg-card: rgba(16, 26, 20, 0.82);
-  --bg-card-hover: rgba(22, 36, 28, 0.95);
-  --bg-elevated: #142018;
-  --bg-glass: rgba(14, 22, 17, 0.88);
+  /* TUNGI REJIM (DARK THEME - CHUQUR QORA, OLOVRANG VA SOF OQ) */
+  --bg-canvas: #060608;
+  --bg-card: rgba(16, 16, 20, 0.82);
+  --bg-card-hover: rgba(24, 24, 30, 0.95);
+  --bg-elevated: #111115;
+  --bg-glass: rgba(10, 10, 14, 0.92);
 
-  --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(45, 106, 79, 0.5);
-  --border-focus: rgba(45, 106, 79, 0.8);
+  --border-hairline: rgba(255, 255, 255, 0.09);
+  --border-hover: rgba(255, 107, 0, 0.5);
+  --border-focus: rgba(255, 107, 0, 0.85);
 
-  /* To'q yashil, oq va qora uyg'unligi */
-  --nature-green: #2d6a4f;
-  --nature-green-dark: #1b4332;
-  --nature-green-soft: rgba(45, 106, 79, 0.2);
+  /* Olovrang (Flame Orange & Warm Amber) */
+  --nature-green: #ff6b00;
+  --nature-green-dark: #e05300;
+  --nature-green-soft: rgba(255, 107, 0, 0.14);
 
-  --trust-blue: #1b4332;
-  --trust-blue-dark: #143527;
-  --trust-blue-soft: rgba(27, 67, 50, 0.25);
+  --trust-blue: #ff7a18;
+  --trust-blue-dark: #ea580c;
+  --trust-blue-soft: rgba(255, 122, 24, 0.16);
 
-  --earth-warm: #40916c;
-  --earth-warm-dark: #2d6a4f;
-  --earth-warm-soft: rgba(64, 145, 108, 0.18);
+  --earth-warm: #f97316;
+  --earth-warm-dark: #c2410c;
+  --earth-warm-soft: rgba(249, 115, 22, 0.15);
+
+  --flame-glow: 0 0 25px rgba(255, 107, 0, 0.35);
 
   /* Fallback aliases for backward compatibility */
   --gold-champagne: var(--nature-green);
   --sage-accent: var(--nature-green);
 
   --text-pure: #ffffff;
-  --text-primary: #f0f5f2;
-  --text-secondary: #9cb1a5;
-  --text-tertiary: #6b8074;
+  --text-primary: #f4f4f6;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
 
-  --input-bg: rgba(9, 14, 11, 0.5);
-  --nav-bg: rgba(9, 14, 11, 0.92);
+  --input-bg: rgba(10, 10, 14, 0.7);
+  --nav-bg: rgba(6, 6, 8, 0.92);
 
   --font-friendly: 'Nunito', system-ui, sans-serif;
   --font-sans: 'Plus Jakarta Sans', 'Nunito', system-ui, sans-serif;
@@ -55,51 +53,53 @@
   --radius-lg: 24px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.28);
-  --shadow-elevated: 0 14px 36px -8px rgba(0, 0, 0, 0.45);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 16px 40px -8px rgba(0, 0, 0, 0.65);
 
   --transition-gentle: 0.22s cubic-bezier(0.25, 1, 0.5, 1);
   --transition-fast: 0.14s ease;
 }
 
-/* KUNDUZGI REJIM (LIGHT THEME - SOF OQ FON, TO'Q YASHIL VA QORA) */
+/* KUNDUZGI REJIM (LIGHT THEME - SOF OQ, OLOVRANG VA QORA) */
 [data-theme="light"] {
-  --bg-canvas: #f8faf9;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f2f7f4;
+  --bg-canvas: #ffffff;
+  --bg-card: #fafafa;
+  --bg-card-hover: #f4f4f5;
   --bg-elevated: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.94);
 
-  --border-hairline: rgba(11, 17, 14, 0.09);
-  --border-hover: rgba(27, 67, 50, 0.35);
-  --border-focus: rgba(27, 67, 50, 0.65);
+  --border-hairline: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(255, 107, 0, 0.45);
+  --border-focus: rgba(255, 107, 0, 0.85);
 
-  --nature-green: #1b4332;
-  --nature-green-dark: #143527;
-  --nature-green-soft: rgba(27, 67, 50, 0.08);
+  --nature-green: #ea580c;
+  --nature-green-dark: #c2410c;
+  --nature-green-soft: rgba(234, 88, 12, 0.1);
 
-  --trust-blue: #1b4332;
-  --trust-blue-dark: #143527;
-  --trust-blue-soft: rgba(27, 67, 50, 0.08);
+  --trust-blue: #f97316;
+  --trust-blue-dark: #ea580c;
+  --trust-blue-soft: rgba(249, 115, 22, 0.12);
 
-  --earth-warm: #2d6a4f;
-  --earth-warm-dark: #1b4332;
-  --earth-warm-soft: rgba(45, 106, 79, 0.1);
+  --earth-warm: #ea580c;
+  --earth-warm-dark: #9a3412;
+  --earth-warm-soft: rgba(234, 88, 12, 0.12);
+
+  --flame-glow: 0 0 20px rgba(234, 88, 12, 0.25);
 
   /* Fallback aliases */
   --gold-champagne: var(--nature-green);
   --sage-accent: var(--nature-green);
 
-  --text-pure: #090e0b;
-  --text-primary: #121c16;
-  --text-secondary: #3d5045;
-  --text-tertiary: #687e72;
+  --text-pure: #09090b;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-tertiary: #71717a;
 
-  --input-bg: #eef3f0;
-  --nav-bg: rgba(255, 255, 255, 0.94);
+  --input-bg: #f4f4f5;
+  --nav-bg: rgba(255, 255, 255, 0.95);
 
-  --shadow-subtle: 0 4px 18px rgba(9, 14, 11, 0.06);
-  --shadow-elevated: 0 14px 36px -8px rgba(9, 14, 11, 0.1);
+  --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 14px 36px -8px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset */
@@ -122,14 +122,22 @@ body {
   min-height: 100vh;
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(ellipse at 15% 0%, rgba(45, 106, 79, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 15%, rgba(27, 67, 50, 0.05) 0%, transparent 55%),
-    radial-gradient(ellipse at 50% 100%, rgba(20, 53, 39, 0.04) 0%, transparent 60%);
+    radial-gradient(ellipse at 50% -12%, rgba(255, 107, 0, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 20%, rgba(255, 255, 255, 0.035) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 55%, rgba(255, 122, 24, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(255, 107, 0, 0.07) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.68;
   overflow-x: hidden;
   transition: background-color var(--transition-gentle);
+}
+
+[data-theme="light"] body {
+  background-image: 
+    radial-gradient(ellipse at 50% -8%, rgba(255, 107, 0, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 30%, rgba(0, 0, 0, 0.02) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 65%, rgba(255, 122, 24, 0.06) 0%, transparent 50%);
 }
 
 ::-webkit-scrollbar {
@@ -140,11 +148,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(120, 140, 160, 0.25);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--trust-blue);
+  background: var(--nature-green);
 }
 
 h1, h2, h3, h4, h5 {
@@ -247,7 +255,7 @@ button {
   font-family: var(--font-friendly);
   font-size: 20px;
   font-weight: 800;
-  box-shadow: 0 3px 10px rgba(48, 101, 71, 0.25);
+  box-shadow: 0 3px 14px rgba(255, 107, 0, 0.35);
 }
 
 .brand-info h1 {
@@ -474,7 +482,7 @@ button {
   color: #ffffff;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(35, 77, 112, 0.25);
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
   transition: all var(--transition-gentle);
 }
 .btn-gold-elegant:hover,
@@ -482,7 +490,7 @@ button {
 .btn-primary:hover {
   background: var(--trust-blue-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(35, 77, 112, 0.35);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
 }
 
 .btn-nature {
@@ -496,7 +504,7 @@ button {
   color: #ffffff;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(48, 101, 71, 0.25);
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
   transition: all var(--transition-gentle);
 }
 .btn-nature:hover {
