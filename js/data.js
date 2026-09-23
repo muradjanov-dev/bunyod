@@ -6,6 +6,27 @@
 export const multilingualQuotes = {
   uz: [
     {
+      id: 101,
+      text: "Men alohida bir soha bilan emas, inson va uning butun hayot tizimi bilan ishlayman: u qayerda turganini, qayerga ketayotganini va bilgan haqiqatlarini qanday qilib real hayotga aylantirishini anglashiga yordam beraman.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Hayot Tizimi",
+      source: "Yo'nalish Pasporti"
+    },
+    {
+      id: 102,
+      text: "Ko'p harakat qilish — to'g'ri harakat qilish degani emas. Ko'p pul topish — to'g'ri yashash degani emas. Ko'p bilim esa to'g'ri qaror degani emas.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Inson Navigatsiyasi",
+      source: "Hayot Tizimi"
+    },
+    {
+      id: 103,
+      text: "To'g'ri yechimdan oldin — to'g'ri tashxis. To'g'ri tashxisdan oldin esa — to'g'ri savol qo'yish kerak.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Tafakkur & Tashxis",
+      source: "Yo'nalish Pasporti"
+    },
+    {
       id: 1,
       text: "Qayerda yara bo'lsa, nur aynan o'sha yerdan ichkariga kiradi.",
       author: "Jaloliddin Rumiy",
@@ -49,6 +70,27 @@ export const multilingualQuotes = {
     }
   ],
   uz_cyrl: [
+    {
+      id: 101,
+      text: "Мен алоҳида бир соҳа билан эмас, инсон ва унинг бутун ҳаёт тизими билан ишлайман: у қаерда турганини, қаерга кетаётганини ва билган ҳақиқатларини қандай қилиб реал ҳаётга айлантиришини англашига ёрдам бераман.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Ҳаёт Тизими",
+      source: "Йўналиш Паспорти"
+    },
+    {
+      id: 102,
+      text: "Кўп ҳаракат қилиш — тўғри ҳаракат қилиш дегани эмас. Кўп пул топиш — тўғри яшаш дегани эмас. Кўп билим эса тўғри қарор дегани эмас.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Инсон Навигацияси",
+      source: "Ҳаёт Тизими"
+    },
+    {
+      id: 103,
+      text: "Тўғри ечимдан олдин — тўғри ташхис. Тўғри ташхисдан олдин эса — тўғри савол қўйиш керак.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Тафаккур & Ташхис",
+      source: "Йўналиш Паспорти"
+    },
     {
       id: 1,
       text: "Қаерда яра бўлса, нур айнан ўша ердан ичкарига киради.",
@@ -94,6 +136,27 @@ export const multilingualQuotes = {
   ],
   ru: [
     {
+      id: 101,
+      text: "Я работаю не с отдельной сферой, а с человеком и всей системой его жизни: помогаю осознать, где он находится, куда идет и как воплотить истинные знания в реальную жизнь.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Система Жизни",
+      source: "Паспорт Направления"
+    },
+    {
+      id: 102,
+      text: "Много суеты не означает верное движение. Много денег не означает праведную жизнь. А много знаний еще не гарантирует верных решений.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Навигация Человека",
+      source: "Система Жизни"
+    },
+    {
+      id: 103,
+      text: "Прежде чем искать верное решение — нужен верный диагноз. А верному диагнозу всегда предшествует правильный вопрос.",
+      author: "Устоз Зуфаржон Шосалимов",
+      category: "Диагностика и Мышление",
+      source: "Паспорт Направления"
+    },
+    {
       id: 1,
       text: "Рана — это место, через которое в тебя проникает свет.",
       author: "Джалаладдин Руми",
@@ -137,6 +200,27 @@ export const multilingualQuotes = {
     }
   ],
   en: [
+    {
+      id: 101,
+      text: "I work not with isolated niches, but with the human being and their entire life system: helping them understand where they stand, where they are going, and how to turn knowledge into living reality.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Life System",
+      source: "Direction Passport"
+    },
+    {
+      id: 102,
+      text: "High speed does not mean correct progress. Excessive wealth does not guarantee righteous living. And abundant knowledge is not yet wisdom.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Human Navigation",
+      source: "Life System"
+    },
+    {
+      id: 103,
+      text: "Before the correct solution comes the right diagnosis. And before the right diagnosis must come the right question.",
+      author: "Ustoz Zufarjon Shosalimov",
+      category: "Diagnosis & Thought",
+      source: "Direction Passport"
+    },
     {
       id: 1,
       text: "The wound is the place where the Light enters you.",

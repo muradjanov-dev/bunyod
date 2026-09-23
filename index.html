@@ -29,6 +29,10 @@
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           <span data-i18n="nav_home">Asosiy</span>
         </button>
+        <button class="nav-link-btn" data-view="passport">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          <span data-i18n="nav_passport">Hayot Tizimi</span>
+        </button>
         <button class="nav-link-btn" data-view="courses">
           <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
           <span data-i18n="nav_courses">Darslar</span>
@@ -170,10 +174,351 @@
           </div>
         </div>
 
-        <div style="margin-top: 48px; display: flex; justify-content: center; gap: 16px;">
-          <button class="btn-gold-elegant" onclick="window.navigateTo('courses')" data-i18n="btn_start_lessons">Darslarni Boshlash</button>
+        <!-- USTOZ ZUFARJON SHOSALIMOV: HAYOT TIZIMI SPOTLIGHT -->
+        <div class="passport-spotlight-card card-minimal">
+          <div class="passport-spotlight-inner">
+            <div class="spotlight-left">
+              <span class="spotlight-badge" data-i18n="passport_home_badge">✦ Ustoz Zufarjon Shosalimov Ta'limoti</span>
+              <h3 class="spotlight-title" data-i18n="passport_home_title">Inson va Uning Butun Hayot Tizimi</h3>
+              <p class="spotlight-quote" data-i18n="passport_home_quote">
+                «Men alohida bir soha bilan emas, inson va uning butun hayot tizimi bilan ishlayman: u qayerda turganini, qayerga ketayotganini va bilgan haqiqatlarini qanday qilib real hayotga aylantirishini anglashiga yordam beraman.»
+              </p>
+              <div class="spotlight-actions">
+                <button class="btn-gold-elegant" onclick="window.navigateTo('passport')" data-i18n="btn_explore_passport">
+                  Hayot Tizimi Pasporti
+                </button>
+              </div>
+            </div>
+            <div class="spotlight-right-features">
+              <div class="spotlight-mini-stat">
+                <div class="mini-stat-num">5</div>
+                <div class="mini-stat-label">Inson Navigatsiyasi Savollari</div>
+              </div>
+              <div class="spotlight-mini-stat">
+                <div class="mini-stat-num">22</div>
+                <div class="mini-stat-label">Qamrab Olingan Hayotiy Qatlamlar</div>
+              </div>
+              <div class="spotlight-mini-stat">
+                <div class="mini-stat-num">1</div>
+                <div class="mini-stat-label">Yaxlit Inson Markazi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 48px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button class="btn-gold-elegant" onclick="window.navigateTo('passport')" data-i18n="btn_explore_passport">Hayot Tizimi Pasporti</button>
+          <button class="btn-outline-elegant" onclick="window.navigateTo('courses')" data-i18n="btn_start_lessons">Darslarni Boshlash</button>
           <button class="btn-outline-elegant" onclick="window.navigateTo('diagnostics')" data-i18n="btn_diagnose_self">O'zingizni Diagnostika Qiling</button>
         </div>
+      </div>
+    </section>
+
+    <!-- HAYOT TIZIMI & YO'NALISH PASPORTI SAHIFA (VIEW-PASSPORT) -->
+    <section id="view-passport" class="view-panel">
+      <div class="container">
+        <!-- Hero & Manifesto Banner -->
+        <div class="passport-hero-wrap">
+          <div class="passport-author-badge">
+            <span class="author-monogram-circle">ZSH</span>
+            <div>
+              <span class="author-title-sub">Ustoz Zufarjon Shosalimov</span>
+              <span class="author-role-sub">Inson va Uning Hayot Tizimi Tadqiqotchisi</span>
+            </div>
+          </div>
+          <div class="section-eyebrow">✦ Yo'nalish Pasporti | Mualliflik Metodologiyasi</div>
+          <h2 class="passport-main-title">Inson va Uning Butun Hayot Tizimi</h2>
+          <p class="passport-lead-desc">
+            Ushbu yo'nalish faqat biznes, psixologiya yoki ta'lim emas. Chunki ularning barchasi markazida bitta <strong>INSON</strong> turibdi. 
+            Inson ishlaydi, biznes qiladi, oila quradi, qaror chiqaradi va bir kuni hayotiga qarab:
+          </p>
+          <div class="passport-central-question-box">
+            <span class="question-icon">✦</span>
+            <h3>«Men qayerga ketyapman?»</h3>
+            <span class="question-sub">deb so'raydi. Asosiy maqsad — ana shu savolga to'g'ri javob topishdir.</span>
+          </div>
+        </div>
+
+        <!-- 1-ASOS: Hayotni bo'laklab tushunib bo'lmaydi -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">01 / ASOS</span>
+            <h3 class="block-title">Inson Hayotini Bo'laklab Tushunib Bo'lmaydi</h3>
+            <p class="block-desc">
+              Odatda muammo qaysi sohada ko'rinsa, yechim ham o'sha yerdan qidiriladi. Ammo inson hayoti alohida xonalardan iborat emas — muammoning ildizi boshqa sohada yotadi.
+            </p>
+          </div>
+
+          <div class="symptom-root-grid">
+            <div class="symptom-card card-minimal">
+              <div class="symptom-header">
+                <span class="symptom-tag visible">Ko'rinayotgan Muammo</span>
+                <h4>💰 Puldagi Tanqislik</h4>
+              </div>
+              <div class="root-divider-arrow">↓</div>
+              <div class="root-content">
+                <span class="symptom-tag hidden-root">Tub Ildizi</span>
+                <p>Muammo faqat moliyada emas: qadriyatlar to'qnashuvi, his-tuyg'ular bilan hisoblashmaslik, intizom va qarorlardagi chalkashlikda.</p>
+              </div>
+            </div>
+
+            <div class="symptom-card card-minimal">
+              <div class="symptom-header">
+                <span class="symptom-tag visible">Ko'rinayotgan Muammo</span>
+                <h4>🏢 Biznesdagi Turg'unlik</h4>
+              </div>
+              <div class="root-divider-arrow">↓</div>
+              <div class="root-content">
+                <span class="symptom-tag hidden-root">Tub Ildizi</span>
+                <p>Muammo faqat boshqaruvda emas: rahbarning shaxsiy energiyasi, vaqtni taqsimlash odati va o'ziga bo'lgan ishonchida.</p>
+              </div>
+            </div>
+
+            <div class="symptom-card card-minimal">
+              <div class="symptom-header">
+                <span class="symptom-tag visible">Ko'rinayotgan Muammo</span>
+                <h4>🏡 Oiladagi Ziddiyat</h4>
+              </div>
+              <div class="root-divider-arrow">↓</div>
+              <div class="root-content">
+                <span class="symptom-tag hidden-root">Tub Ildizi</span>
+                <p>Muammo munosabatlar texnikasida emas: ishdan orttirilgan ruhiy bosim, charchoq, mas'uliyatni o'z bo'yniga ololmaslikda.</p>
+              </div>
+            </div>
+
+            <div class="symptom-card card-minimal">
+              <div class="symptom-header">
+                <span class="symptom-tag visible">Ko'rinayotgan Muammo</span>
+                <h4>⚡ Irodasizlik & Kechiktirish</h4>
+              </div>
+              <div class="root-divider-arrow">↓</div>
+              <div class="root-content">
+                <span class="symptom-tag hidden-root">Tub Ildizi</span>
+                <p>Muammo motivatsiyada emas: maqsadning o'ziga tegishli emasligi, yashirin qo'rquvlar yoki bilimni harakatga soluvchi tizimning yo'qligida.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bog'lanish zanjiri -->
+          <div class="interconnection-flow-banner card-minimal">
+            <span class="flow-title">Yaxlit Ta'sir Zanjiri:</span>
+            <div class="flow-chips">
+              <div class="flow-chip">Tafakkur</div>
+              <div class="flow-sep">→</div>
+              <div class="flow-chip">Qarorlar</div>
+              <div class="flow-sep">→</div>
+              <div class="flow-chip">Odatlar</div>
+              <div class="flow-sep">→</div>
+              <div class="flow-chip highlight">Haqiqiy Natijalar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-ASOS: INSON NAVIGATSIYASI (INTERAKTIV 5 SAVOL) -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">02 / NAVIGATSIYA</span>
+            <h3 class="block-title">Inson Navigatsiyasi: 5 Ta Markaziy Savol</h3>
+            <p class="block-desc">
+              Навигатор учун тезлик биринчи масала эмас. Аввал: қаердаман, қаерга кетяпман ва нега айнан ўша ерга? Ҳар бир савол устига босинг ва ўз ҳаётингизни таҳлил қилинг.
+            </p>
+          </div>
+
+          <!-- Nav Stepper Pills -->
+          <div class="passport-nav-pills-bar" id="passportNavTabs"></div>
+
+          <!-- Active Question Card -->
+          <div id="passportNavContent" style="margin-top: 24px;"></div>
+        </div>
+
+        <!-- 3-ASOS: PARADOKSLAR VA SAROBLAR -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">03 / PARADOKSLAR</span>
+            <h3 class="block-title">Paradokslar va Saroblar</h3>
+            <p class="block-desc">
+              Tashqi tomondan yutuqdek ko'ringan har bir narsa ichki tartib va to'g'ri hayotni anglatmaydi.
+            </p>
+          </div>
+
+          <div class="paradox-cards-grid">
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Ko'p harakat qilish</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">To'g'ri harakat qilish</div>
+            </div>
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Ko'p pul topish</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">To'g'ri yashash</div>
+            </div>
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Ko'p bilim olish</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">To'g'ri qaror chiqarish</div>
+            </div>
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Yuqori lavozim</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">Ichki xotirjamlik va tartib</div>
+            </div>
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Mashhurlik</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">Haqiqiy qadr-qimmat</div>
+            </div>
+            <div class="paradox-item card-minimal">
+              <div class="paradox-side left">Doimiy bandlik</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">Samaradorlik va natija</div>
+            </div>
+            <div class="paradox-item card-minimal full-span">
+              <div class="paradox-side left">Maqsadga erishish</div>
+              <div class="paradox-symbol">≠</div>
+              <div class="paradox-side right">Maqsadning to'g'ri tanlangani</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-ASOS: TAYYOR JAVOB EMAS, TO'G'RI TASHXIS -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">04 / METODOLOGIYA</span>
+            <h3 class="block-title">To'g'ri Yechimdan Oldin — To'g'ri Tashxis</h3>
+            <p class="block-desc">
+              «Nega ishni boshlay olmayapman?» — Ushbu tashqi muammoning 6 xil insondagi ildizi mutlaqo turlicha bo'lishi mumkin:
+            </p>
+          </div>
+
+          <div class="diagnostics-roots-row">
+            <div class="diag-root-pill">1. Qo'rquv va noma'lumlik</div>
+            <div class="diag-root-pill">2. Maqsadning noaniqligi</div>
+            <div class="diag-root-pill">3. Ustuvorliklar to'qnashuvi</div>
+            <div class="diag-root-pill">4. Energiya va quvvat yetishmasligi</div>
+            <div class="diag-root-pill">5. Ishning o'ziga tegishli emasligi</div>
+            <div class="diag-root-pill">6. Bilim bor, lekin tizim yo'q</div>
+          </div>
+
+          <div class="creed-quote-banner card-minimal">
+            <span class="creed-icon">⚖️</span>
+            <h4>«To'g'ri yechimdan oldin — to'g'ri tashxis. To'g'ri tashxisdan oldin esa — to'g'ri savol kerak.»</h4>
+          </div>
+        </div>
+
+        <!-- 5-ASOS: «BILISHDAN — AMALGA» ZANJIRI -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">05 / HARAKAT</span>
+            <h3 class="block-title">«Bilishdan — Amalga» Zanjiri</h3>
+            <p class="block-desc">
+              Inson ko'p narsani biladi: sog'lom ovqatlanishni, vaqtni tejashni, oilaga e'tibor berishni. Ammo bilgani hayotiga aylanmagan. Nega bilim xulqqa aylanmayapti?
+            </p>
+          </div>
+
+          <div class="action-chain-stepper">
+            <div class="chain-step-card card-minimal">
+              <span class="step-num">01</span>
+              <h4>Anglash</h4>
+              <p>Illuziya va odatiy qoliplardan uyg'onish, o'z holatini ko'ra olish.</p>
+            </div>
+            <div class="chain-arrow-symbol">→</div>
+            <div class="chain-step-card card-minimal">
+              <span class="step-num">02</span>
+              <h4>Qaror</h4>
+              <p>Ikkilanish va shubhalardan qat'iy irodaviy tanlov sari o'tish.</p>
+            </div>
+            <div class="chain-arrow-symbol">→</div>
+            <div class="chain-step-card card-minimal">
+              <span class="step-num">03</span>
+              <h4>Harakat</h4>
+              <p>Kechiktirishsiz, bugundan boshlanadigan aniq amaliy qadamlar.</p>
+            </div>
+            <div class="chain-arrow-symbol">→</div>
+            <div class="chain-step-card card-minimal">
+              <span class="step-num">04</span>
+              <h4>Tizim</h4>
+              <p>Harakatni kundalik odat, qoida va avtomatlashgan tartibga aylantirish.</p>
+            </div>
+            <div class="chain-arrow-symbol">→</div>
+            <div class="chain-step-card card-minimal highlight">
+              <span class="step-num">05</span>
+              <h4>Natija</h4>
+              <p>Barqaror, chuqur va insonni o'zgartiruvchi tirik hayotiy meva.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6-ASOS: «KIM UCHUN?» (AUDITORIYA) -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">06 / AUDITORIYA</span>
+            <h3 class="block-title">Bu Yo'nalish Kim Uchun?</h3>
+            <p class="block-desc">
+              Har bir kasb va maqom egasi bu yerda o'zini yaxlit inson sifatida kashf etishi mumkin:
+            </p>
+          </div>
+
+          <div class="persona-selector-wrap">
+            <div class="persona-tabs-bar" id="passportPersonaTabs"></div>
+            <div id="passportPersonaCard" style="margin-top: 20px;"></div>
+          </div>
+        </div>
+
+        <!-- 7-ASOS: 22 TA QAMRAB OLINGAN HAYOTIY QATLAM -->
+        <div class="passport-section-block">
+          <div class="block-header-center">
+            <span class="block-num-pill">07 / QATLAMLAR</span>
+            <h3 class="block-title">22 Ta Qamrab Olingan Hayotiy Qatlam</h3>
+            <p class="block-desc">
+              Bu «bir inson hamma narsaning mutaxassisi» degani emas, balki sohalar markazidagi insonni va ular orasidagi bog'lanishlarni ko'rishdir:
+            </p>
+          </div>
+
+          <div class="dimensions-tags-cloud">
+            <span class="dim-tag">Tafakkur va dunyoqarash</span>
+            <span class="dim-tag">Qadriyat va ustuvorliklar</span>
+            <span class="dim-tag">Hayot yo'nalishi va maqsadlar</span>
+            <span class="dim-tag">Qaror chiqarish</span>
+            <span class="dim-tag">Ichki qarama-qarshiliklar</span>
+            <span class="dim-tag">Qo'rquv va to'siqlar</span>
+            <span class="dim-tag">Odat va intizom</span>
+            <span class="dim-tag">Vaqt va diqqat</span>
+            <span class="dim-tag">Bilimni amalga aylantirish</span>
+            <span class="dim-tag">Shaxsiy mas'uliyat</span>
+            <span class="dim-tag">Oila va munosabatlar</span>
+            <span class="dim-tag">Farzand tarbiyasi</span>
+            <span class="dim-tag">Kasb va professional o'sish</span>
+            <span class="dim-tag">Liderlik</span>
+            <span class="dim-tag">Jamoa va boshqaruv</span>
+            <span class="dim-tag">Biznes va tadbirkorlik</span>
+            <span class="dim-tag">Pul va resurslarga munosabat</span>
+            <span class="dim-tag">Shaxsiy kapitallar</span>
+            <span class="dim-tag">Sog'lom hayot tartibi</span>
+            <span class="dim-tag">Ma'no va ma'naviy yo'nalish</span>
+            <span class="dim-tag">Jamiyatdagi o'rin</span>
+            <span class="dim-tag highlight">Shaxsiy meros va natija</span>
+          </div>
+        </div>
+
+        <!-- YAKUNIY XULOSA & ASOSIY MAQSAD -->
+        <div class="passport-final-creed card-minimal">
+          <div class="creed-inner-box">
+            <div class="creed-badge">BOSH MAQSAD</div>
+            <h3>Insonni O'ziga Qaram Qilish Emas</h3>
+            <p class="creed-text">
+              Ushbu yondashuvning maqsadi insonlarga doimiy tayyor retsept berib turish emas, balki 
+              <strong>o'z hayotini ko'ra oladigan, tashxis qila oladigan, to'g'ri savol bera oladigan, ongli qaror chiqara oladigan va o'z yo'lida mustaqil yura oladigan darajaga yetkazishdir.</strong>
+            </p>
+            <div class="tavfiq-notice">
+              <span>✦ Tavfiq Allohdandir ✦</span>
+            </div>
+            <div style="margin-top: 24px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+              <button class="btn-gold-elegant" onclick="window.navigateTo('courses')" data-i18n="btn_start_lessons">Darslarni Boshlash</button>
+              <button class="btn-outline-elegant" onclick="window.navigateTo('books')" data-i18n="nav_books">Kitoblar Kutubxonasi</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

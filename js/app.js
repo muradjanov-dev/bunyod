@@ -11,6 +11,7 @@ import { diagnosticsManager } from './diagnostics.js';
 import { breathingManager } from './breathing.js';
 import { dashboardManager } from './dashboard.js';
 import { booksManager } from './books.js';
+import { passportManager } from './passport.js';
 
 class BunyodApp {
   constructor() {
@@ -35,10 +36,11 @@ class BunyodApp {
     breathingManager.init();
     dashboardManager.init();
     booksManager.init();
+    passportManager.init();
 
     // Hash orqali navigatsiya
     const hash = window.location.hash.replace('#', '');
-    if (hash && ['home', 'courses', 'books', 'tasks', 'diagnostics', 'calm', 'dashboard'].includes(hash)) {
+    if (hash && ['home', 'passport', 'courses', 'books', 'tasks', 'diagnostics', 'calm', 'dashboard'].includes(hash)) {
       this.navigateTo(hash);
     } else {
       this.navigateTo('home');
@@ -87,6 +89,10 @@ class BunyodApp {
 
       if (viewName === 'diagnostics') {
         setTimeout(() => diagnosticsManager.drawWheel(), 50);
+      }
+      if (viewName === 'passport') {
+        passportManager.renderNavigationStepper();
+        passportManager.renderPersonas();
       }
       if (viewName === 'books') {
         booksManager.renderBooks();
