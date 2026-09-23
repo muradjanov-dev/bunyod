@@ -4,7 +4,7 @@
 
 export const translations = {
   uz: {
-    brand_sub: "Ta'lim & Psixologiya",
+    brand_sub: "Inson & Hayot Tizimi",
     nav_home: "Asosiy",
     nav_passport: "Hayot Tizimi",
     nav_courses: "Darslar",
@@ -37,11 +37,11 @@ export const translations = {
     dashboard_orders_title: "Mening Kitob Buyurtmalarim",
     dashboard_no_orders: "Hozircha buyurtmalar yo'q. Kitoblar bo'limidan sevimli asarlaringizni xarid qiling!",
 
-    hero_tag: "✦ Inson Ruhiyati va Ichki Salohiyati",
+    hero_tag: "✦ Inson va Uning Butun Hayot Tizimi",
     hero_title_pre: "O'zligingizni chuqur anglang, hayotingizni",
     hero_title_em: "bunyod",
     hero_title_post: "eting",
-    hero_desc: "Nazariya va amaliyot uyg'unlashgan makon. Ilmiy asoslangan psixologik darslar, ongli refleksiya hamda o'zingizni kashf etish uchun interaktiv vositalar.",
+    hero_desc: "Inson, uning ruhiyati, biznesi, oilasi va maqsadlari yaxlit tizimda. Qayerdaligingizni anglang, to'g'ri tashxis qo'ying va hayotingizni ongli bunyod eting.",
     btn_start_lessons: "Darslarni Boshlash",
     btn_diagnose_self: "O'zingizni Diagnostika Qiling",
     btn_explore_passport: "Hayot Tizimi Pasporti",
@@ -149,7 +149,7 @@ export const translations = {
   },
 
   uz_cyrl: {
-    brand_sub: "Таълим & Психология",
+    brand_sub: "Инсон & Ҳаёт Тизими",
     nav_home: "Асосий",
     nav_passport: "Ҳаёт Тизими",
     nav_courses: "Дарслар",
@@ -182,11 +182,11 @@ export const translations = {
     dashboard_orders_title: "Менинг Китоб Буюртмаларим",
     dashboard_no_orders: "Ҳозирча буюртмалар йўқ. Китоблар бўлимидан севимли асарларингизни харид қилинг!",
 
-    hero_tag: "✦ Инсон Руҳияти ва Ички Салоҳияти",
+    hero_tag: "✦ Инсон ва Унинг Бутун Ҳаёт Тизими",
     hero_title_pre: "Ўзлигингизни чуқур англанг, ҳаётингизни",
     hero_title_em: "бунёд",
     hero_title_post: "этинг",
-    hero_desc: "Назария ва амалиёт уйғунлашган макон. Илмий асосланган психологик дарслар, онгли рефлексия ҳамда ўзингизни кашф этиш учун интерактив воситалар.",
+    hero_desc: "Инсон, унинг руҳияти, бизнеси, оиласи ва мақсадлари яхлит тизимда. Қаердалигингизни англанг, тўғри ташхис қўйинг ва ҳаётингизни онгли бунёд этинг.",
     btn_start_lessons: "Дарсларни Бошлаш",
     btn_diagnose_self: "Ўзингизни Диагностика Қилинг",
     btn_explore_passport: "Ҳаёт Тизими Паспорти",
@@ -294,7 +294,7 @@ export const translations = {
   },
 
   ru: {
-    brand_sub: "Образование & Психология",
+    brand_sub: "Человек & Система Жизни",
     nav_home: "Главная",
     nav_passport: "Система Жизни",
     nav_courses: "Уроки",
@@ -327,11 +327,11 @@ export const translations = {
     dashboard_orders_title: "Мои заказы книг",
     dashboard_no_orders: "Заказов пока нет. Выберите любимые книги в разделе библиотеки!",
 
-    hero_tag: "✦ Внутренний Потенциал и Осознанность",
+    hero_tag: "✦ Человек и Вся Система Его Жизни",
     hero_title_pre: "Познайте свою глубину, начните",
     hero_title_em: "созидать",
     hero_title_post: "свою жизнь",
-    hero_desc: "Пространство гармонии теории и практики. Научно обоснованные психологические уроки, осознанная рефлексия и интерактивные инструменты познания себя.",
+    hero_desc: "Человек, его мышление, дело, семья и цели как целостная система. Осознайте свою точку на карте, поставьте верный диагноз и созидайте жизнь осознанно.",
     btn_start_lessons: "Начать обучение",
     btn_diagnose_self: "Пройти диагностику",
     btn_explore_passport: "Паспорт Системы Жизни",
@@ -439,7 +439,7 @@ export const translations = {
   },
 
   en: {
-    brand_sub: "Education & Psychology",
+    brand_sub: "Human & Life System",
     nav_home: "Home",
     nav_passport: "Life System",
     nav_courses: "Lessons",
@@ -472,11 +472,11 @@ export const translations = {
     dashboard_orders_title: "My Book Orders",
     dashboard_no_orders: "No orders yet. Discover and order your favorite books from the library!",
 
-    hero_tag: "✦ Human Psyche and Potential",
+    hero_tag: "✦ Man and His Complete Life System",
     hero_title_pre: "Discover your true self, begin to",
     hero_title_em: "build",
     hero_title_post: "your life",
-    hero_desc: "A sanctuary where theory harmonizes with practice. Scientifically grounded psychological lessons, mindful reflection, and interactive self-discovery tools.",
+    hero_desc: "The human being, mindset, business, relationships, and purpose as a unified ecosystem. Understand where you stand, diagnose root causes, and build your life deliberately.",
     btn_start_lessons: "Start Learning",
     btn_diagnose_self: "Self-Diagnosis",
     btn_explore_passport: "Life System Passport",
