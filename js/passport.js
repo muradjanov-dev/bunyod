@@ -486,13 +486,13 @@ class PassportManager {
           <div class="nav-q-reflection-box">
             <label class="reflection-label">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-              <span>Shaxsiy Refleksiya va Qayd:</span>
+              <span>${i18nManager.t('reflection_label')}</span>
             </label>
             <textarea id="navReflectionInput" class="notes-textarea" rows="3" placeholder="${currentQ.prompt}">${savedText}</textarea>
             
             <div class="reflection-footer-actions">
               <button class="btn-gold-elegant" id="saveReflectionBtn" style="padding: 9px 20px; font-size: 13.5px;">
-                Saqlash (+25 XP)
+                ${i18nManager.t('reflection_save_btn')}
               </button>
               <span id="reflectionSaveNotice" class="save-feedback-text"></span>
             </div>
@@ -511,7 +511,7 @@ class PassportManager {
         const val = inputArea.value.trim();
         this.saveReflection(currentQ.id, val);
         if (notice) {
-          notice.textContent = "✓ Muvaffaqiyatli saqlandi!";
+          notice.textContent = i18nManager.t('reflection_saved_msg');
           notice.style.color = "var(--nature-green)";
           setTimeout(() => { notice.textContent = ""; }, 3000);
         }
