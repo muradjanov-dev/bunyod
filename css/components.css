@@ -15,7 +15,7 @@
   gap: 8px;
   padding: 6px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 107, 0, 0.3);
+  border: 1px solid var(--border-hairline);
   background: var(--nature-green-soft);
   color: var(--nature-green);
   font-size: 13px;
@@ -97,7 +97,7 @@
   padding: 4px 14px;
   border-radius: var(--radius-full);
   background: var(--nature-green-soft);
-  border: 1px solid rgba(255, 107, 0, 0.25);
+  border: 1px solid var(--border-hairline);
 }
 
 .quote-action-btns {
@@ -257,7 +257,7 @@
 }
 .feature-icon-badge.sage {
   background: var(--nature-green-soft);
-  border-color: rgba(255, 107, 0, 0.25);
+  border-color: var(--border-hairline);
   color: var(--nature-green);
 }
 
@@ -790,7 +790,7 @@
 .task-status-tag.done {
   background: var(--nature-green-soft);
   color: var(--nature-green);
-  border: 1px solid rgba(255, 107, 0, 0.25);
+  border: 1px solid var(--border-hairline);
 }
 
 .task-prompt-text {
@@ -819,7 +819,7 @@
   padding: 12px 16px;
   border-radius: var(--radius-sm);
   background: var(--nature-green-soft);
-  border: 1px solid rgba(255, 107, 0, 0.2);
+  border: 1px solid var(--border-hairline);
   font-size: 13px;
   color: var(--text-primary);
   display: none;
@@ -981,29 +981,29 @@
   width: 140px;
   height: 140px;
   border-radius: var(--radius-full);
-  background: radial-gradient(circle, rgba(50, 100, 141, 0.4) 0%, rgba(255, 107, 0, 0.2) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(50, 100, 141, 0.3) 0%, rgba(250, 93, 41, 0.1) 70%, transparent 100%);
   border: 2px solid var(--nature-green);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 4s ease;
-  box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .breathing-orb-core.expand {
   transform: scale(1.55);
-  box-shadow: 0 0 55px rgba(50, 100, 141, 0.45);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
 }
 
 .breathing-orb-core.hold {
   transform: scale(1.55);
-  box-shadow: 0 0 65px rgba(255, 107, 0, 0.45);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
 }
 
 .breathing-orb-core.contract {
   transform: scale(1);
-  box-shadow: 0 0 20px rgba(50, 100, 141, 0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .breath-phase-title {
@@ -1117,7 +1117,7 @@
 .profile-status-pill.registered {
   background: var(--nature-green-soft);
   color: var(--nature-green);
-  border: 1px solid rgba(255, 107, 0, 0.3);
+  border: 1px solid var(--border-hairline);
 }
 
 .profile-status-pill.guest {
@@ -1184,7 +1184,7 @@
 }
 
 .achievement-badge.unlocked {
-  border-color: rgba(255, 107, 0, 0.35);
+  border-color: var(--border-hover);
   background: var(--nature-green-soft);
   color: var(--nature-green);
   font-weight: 700;
@@ -1369,7 +1369,7 @@
   color: #ffffff;
   border-color: var(--nature-green);
   font-weight: 700;
-  box-shadow: 0 3px 12px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .book-search-box {
@@ -1428,8 +1428,8 @@
 }
 
 .book-card.top-featured-book {
-  border-color: rgba(255, 122, 24, 0.45);
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.15);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-elevated);
 }
 
 .book-top-badge {
@@ -1707,7 +1707,7 @@
 /* Buyurtma Formasi */
 .order-modal-recap {
   background: var(--nature-green-soft);
-  border: 1px solid rgba(255, 122, 24, 0.25);
+  border: 1px solid var(--border-hairline);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
   display: flex;
@@ -1821,9 +1821,9 @@
   margin: 36px auto 0;
   padding: 36px 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(255, 107, 0, 0.45) 0%, rgba(12, 12, 16, 0.95) 100%), var(--bg-card);
-  border: 1px solid rgba(255, 122, 24, 0.35);
-  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5);
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  box-shadow: var(--shadow-subtle);
   position: relative;
   overflow: hidden;
 }
@@ -1846,7 +1846,7 @@
   display: inline-block;
   font-size: 12.5px;
   font-weight: 800;
-  color: #ff7a18;
+  color: var(--nature-green);
   letter-spacing: 0.04em;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -1863,7 +1863,7 @@
 .spotlight-quote {
   font-size: 14.5px;
   line-height: 1.65;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-style: italic;
   margin-bottom: 22px;
   border-left: 2px solid var(--nature-green);
@@ -1922,7 +1922,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--nature-green), var(--trust-blue-dark));
+  background: var(--nature-green);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -1930,7 +1930,7 @@
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .author-title-sub {
@@ -1958,40 +1958,48 @@
 }
 
 .passport-lead-desc {
-  font-size: 16px;
-  color: var(--text-secondary);
+  font-size: 16.5px;
+  color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 28px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .passport-central-question-box {
-  background: linear-gradient(135deg, rgba(255, 107, 0, 0.35) 0%, rgba(12, 12, 16, 0.85) 100%), var(--bg-card);
-  border: 1px solid rgba(255, 122, 24, 0.45);
-  padding: 24px 30px;
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  padding: 30px 36px;
   border-radius: var(--radius-md);
   margin: 0 auto;
   max-width: 680px;
   position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-subtle);
 }
 
 .passport-central-question-box .question-icon {
-  color: #ff7a18;
-  font-size: 18px;
-  margin-bottom: 6px;
+  color: var(--nature-green);
+  font-size: 20px;
+  margin-bottom: 8px;
   display: block;
 }
 
 .passport-central-question-box h3 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 6px;
-  letter-spacing: 0.01em;
+  color: var(--text-pure);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .passport-central-question-box .question-sub {
-  font-size: 13.5px;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text-secondary);
+  line-height: 1.6;
+  display: block;
 }
 
 /* 3. Passport Section Blocks */
@@ -2010,9 +2018,9 @@
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #ff7a18;
+  color: var(--nature-green);
   background: var(--nature-green-soft);
-  border: 1px solid rgba(255, 122, 24, 0.25);
+  border: 1px solid rgba(249, 115, 22, 0.25);
   padding: 4px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 12px;
@@ -2026,9 +2034,9 @@
 }
 
 .block-desc {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 15.5px;
+  color: var(--text-primary);
+  line-height: 1.65;
 }
 
 /* Symptom vs Root Grid */
@@ -2065,8 +2073,8 @@
 
 .symptom-tag.hidden-root {
   background: var(--nature-green-soft);
-  color: #ff7a18;
-  border: 1px solid rgba(255, 122, 24, 0.25);
+  color: var(--nature-green);
+  border: 1px solid rgba(249, 115, 22, 0.25);
 }
 
 .symptom-card h4 {
@@ -2079,15 +2087,16 @@
 .root-divider-arrow {
   text-align: center;
   font-size: 18px;
-  color: #ff7a18;
+  color: var(--nature-green);
   margin: 6px 0 12px;
   font-weight: 800;
 }
 
 .root-content p {
-  font-size: 13.5px;
-  color: var(--text-secondary);
-  line-height: 1.55;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -2131,7 +2140,7 @@
 }
 
 .flow-sep {
-  color: #ff7a18;
+  color: var(--nature-green);
   font-weight: 800;
   font-size: 15px;
 }
@@ -2166,7 +2175,7 @@
   background: var(--nature-green);
   color: #ffffff;
   border-color: var(--nature-green);
-  box-shadow: 0 4px 14px rgba(255, 122, 24, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .passport-nav-pill .pill-number {
@@ -2185,7 +2194,8 @@
   margin: 0 auto;
   padding: 36px 40px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 122, 24, 0.3);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: var(--bg-card);
 }
 
 .nav-q-badge {
@@ -2198,8 +2208,8 @@
 .q-tag-num {
   font-size: 12px;
   font-weight: 800;
-  color: #ff7a18;
-  background: rgba(255, 122, 24, 0.2);
+  color: var(--nature-green);
+  background: var(--nature-green-soft);
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -2207,7 +2217,7 @@
 .q-tag-text {
   font-size: 12.5px;
   font-weight: 700;
-  color: #ff7a18;
+  color: var(--nature-green);
   text-transform: uppercase;
 }
 
@@ -2226,14 +2236,19 @@
 }
 
 .nav-q-detail {
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.7;
-  color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
   padding: 18px 22px;
   border-radius: var(--radius-sm);
-  border-left: 3px solid #ff7a18;
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--nature-green);
   margin-bottom: 24px;
+}
+
+[data-theme="light"] .nav-q-detail {
+  background: #f4f4f5;
 }
 
 .reflection-label {
@@ -2274,33 +2289,37 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-subtle);
 }
 
 .paradox-item.full-span {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, rgba(255, 107, 0, 0.25) 0%, rgba(12, 12, 16, 0.6) 100%), var(--bg-card);
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.25);
 }
 
 .paradox-side {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 700;
   flex: 1;
 }
 
 .paradox-side.left {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: right;
 }
 
 .paradox-symbol {
   font-size: 20px;
   font-weight: 900;
-  color: #f87171;
+  color: var(--nature-green);
   padding: 0 8px;
 }
 
 .paradox-side.right {
-  color: #ff7a18;
+  color: var(--text-pure);
   text-align: left;
 }
 
@@ -2330,8 +2349,9 @@
   padding: 24px 30px;
   text-align: center;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(255, 107, 0, 0.25) 0%, rgba(12, 12, 16, 0.8) 100%), var(--bg-card);
-  border: 1px solid rgba(255, 122, 24, 0.35);
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  box-shadow: var(--shadow-subtle);
 }
 
 .creed-quote-banner .creed-icon {
@@ -2369,14 +2389,14 @@
 }
 
 .chain-step-card.highlight {
-  border-color: rgba(255, 122, 24, 0.6);
-  background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, var(--bg-card) 100%);
+  border-color: rgba(249, 115, 22, 0.45);
+  background: var(--bg-card);
 }
 
 .chain-step-card .step-num {
   font-size: 12px;
   font-weight: 800;
-  color: #ff7a18;
+  color: var(--nature-green);
   display: block;
   margin-bottom: 4px;
 }
@@ -2389,8 +2409,8 @@
 }
 
 .chain-step-card p {
-  font-size: 12px;
-  color: var(--text-secondary);
+  font-size: 13px;
+  color: var(--text-primary);
   line-height: 1.45;
   margin: 0;
 }
@@ -2398,7 +2418,7 @@
 .chain-arrow-symbol {
   font-size: 20px;
   font-weight: 800;
-  color: #ff7a18;
+  color: var(--nature-green);
 }
 
 @media (max-width: 768px) {
@@ -2463,7 +2483,7 @@
   height: 44px;
   border-radius: 50%;
   background: var(--nature-green-soft);
-  color: #ff7a18;
+  color: var(--nature-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2479,14 +2499,14 @@
 .persona-card-quote {
   font-size: 13.5px;
   font-style: italic;
-  color: #ff7a18;
+  color: var(--nature-green);
   margin: 0;
 }
 
 .persona-card-desc {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -2507,20 +2527,20 @@
   border: 1px solid var(--border-hairline);
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   transition: all var(--transition-fast);
 }
 
 .dim-tag:hover {
   color: var(--text-pure);
-  border-color: #ff7a18;
+  border-color: var(--nature-green);
   background: var(--nature-green-soft);
 }
 
 .dim-tag.highlight {
-  background: rgba(255, 122, 24, 0.25);
-  color: #ff7a18;
-  border-color: rgba(255, 122, 24, 0.5);
+  background: var(--nature-green-soft);
+  color: var(--nature-green);
+  border-color: rgba(249, 115, 22, 0.45);
   font-weight: 700;
 }
 
@@ -2531,8 +2551,9 @@
   padding: 44px 40px;
   text-align: center;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 122, 24, 0.4);
-  background: radial-gradient(circle at center, rgba(255, 107, 0, 0.3) 0%, rgba(12, 12, 16, 0.95) 100%), var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-subtle);
 }
 
 .creed-badge {
@@ -2540,7 +2561,7 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #ff7a18;
+  color: var(--nature-green);
   margin-bottom: 12px;
 }
 
@@ -2554,19 +2575,19 @@
 .creed-text {
   font-size: 16px;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   max-width: 660px;
   margin: 0 auto 20px;
 }
 
 .creed-text strong {
-  color: var(--text-primary);
+  color: var(--nature-green);
 }
 
 .tavfiq-notice {
   font-size: 14px;
   font-weight: 700;
-  color: #ff7a18;
+  color: var(--nature-green);
   letter-spacing: 0.05em;
 }
 

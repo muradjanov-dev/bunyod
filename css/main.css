@@ -6,43 +6,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* TUNGI REJIM (DARK THEME - CHUQUR QORA, OLOVRANG VA SOF OQ) */
-  --bg-canvas: #060608;
-  --bg-card: rgba(16, 16, 20, 0.82);
-  --bg-card-hover: rgba(24, 24, 30, 0.95);
-  --bg-elevated: #111115;
-  --bg-glass: rgba(10, 10, 14, 0.92);
+  /* TUNGI REJIM (DARK THEME - MATTE OBSIDIAN, FRESH FABLE ORANGE & CRISP WHITE) */
+  --bg-canvas: #09090b;
+  --bg-card: rgba(18, 18, 22, 0.85);
+  --bg-card-hover: rgba(26, 26, 32, 0.95);
+  --bg-elevated: #141418;
+  --bg-glass: rgba(12, 12, 16, 0.92);
 
-  --border-hairline: rgba(255, 255, 255, 0.09);
-  --border-hover: rgba(255, 107, 0, 0.5);
-  --border-focus: rgba(255, 107, 0, 0.85);
+  --border-hairline: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(250, 93, 41, 0.4);
+  --border-focus: rgba(250, 93, 41, 0.75);
 
-  /* Olovrang (Flame Orange & Warm Amber) */
-  --nature-green: #ff6b00;
-  --nature-green-dark: #e05300;
-  --nature-green-soft: rgba(255, 107, 0, 0.14);
+  /* Fresh Fable Orange (Matte, non-glowing, warm, fresh terracotta) */
+  --nature-green: #fa5d29;
+  --nature-green-dark: #e04b1a;
+  --nature-green-soft: rgba(250, 93, 41, 0.1);
 
-  --trust-blue: #ff7a18;
-  --trust-blue-dark: #ea580c;
-  --trust-blue-soft: rgba(255, 122, 24, 0.16);
+  --trust-blue: #fa5d29;
+  --trust-blue-dark: #e04b1a;
+  --trust-blue-soft: rgba(250, 93, 41, 0.1);
 
-  --earth-warm: #f97316;
-  --earth-warm-dark: #c2410c;
-  --earth-warm-soft: rgba(249, 115, 22, 0.15);
-
-  --flame-glow: 0 0 25px rgba(255, 107, 0, 0.35);
+  --earth-warm: #e04b1a;
+  --earth-warm-dark: #b8380e;
+  --earth-warm-soft: rgba(224, 75, 26, 0.1);
 
   /* Fallback aliases for backward compatibility */
   --gold-champagne: var(--nature-green);
   --sage-accent: var(--nature-green);
 
+  /* Yuqori kontrastli, ko'rinadigan matnlar (Dark Mode) */
   --text-pure: #ffffff;
   --text-primary: #f4f4f6;
-  --text-secondary: #a1a1aa;
-  --text-tertiary: #71717a;
+  --text-secondary: #d4d4d8;
+  --text-tertiary: #a1a1aa;
 
-  --input-bg: rgba(10, 10, 14, 0.7);
-  --nav-bg: rgba(6, 6, 8, 0.92);
+  --input-bg: rgba(18, 18, 22, 0.8);
+  --nav-bg: rgba(9, 9, 11, 0.94);
 
   --font-friendly: 'Nunito', system-ui, sans-serif;
   --font-sans: 'Plus Jakarta Sans', 'Nunito', system-ui, sans-serif;
@@ -53,53 +52,52 @@
   --radius-lg: 24px;
   --radius-full: 9999px;
 
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.45);
-  --shadow-elevated: 0 16px 40px -8px rgba(0, 0, 0, 0.65);
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-elevated: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
 
   --transition-gentle: 0.22s cubic-bezier(0.25, 1, 0.5, 1);
   --transition-fast: 0.14s ease;
 }
 
-/* KUNDUZGI REJIM (LIGHT THEME - SOF OQ, OLOVRANG VA QORA) */
+/* KUNDUZGI REJIM (LIGHT THEME - TOZA OQ, FABLE ORANGE VA TO'Q QORA MATNLAR) */
 [data-theme="light"] {
   --bg-canvas: #ffffff;
-  --bg-card: #fafafa;
+  --bg-card: #fbfbfa;
   --bg-card-hover: #f4f4f5;
   --bg-elevated: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.94);
+  --bg-glass: rgba(255, 255, 255, 0.96);
 
   --border-hairline: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(255, 107, 0, 0.45);
-  --border-focus: rgba(255, 107, 0, 0.85);
+  --border-hover: rgba(229, 75, 23, 0.35);
+  --border-focus: rgba(229, 75, 23, 0.75);
 
-  --nature-green: #ea580c;
-  --nature-green-dark: #c2410c;
-  --nature-green-soft: rgba(234, 88, 12, 0.1);
+  --nature-green: #e54b17;
+  --nature-green-dark: #c43809;
+  --nature-green-soft: rgba(229, 75, 23, 0.08);
 
-  --trust-blue: #f97316;
-  --trust-blue-dark: #ea580c;
-  --trust-blue-soft: rgba(249, 115, 22, 0.12);
+  --trust-blue: #e54b17;
+  --trust-blue-dark: #c43809;
+  --trust-blue-soft: rgba(229, 75, 23, 0.08);
 
-  --earth-warm: #ea580c;
-  --earth-warm-dark: #9a3412;
-  --earth-warm-soft: rgba(234, 88, 12, 0.12);
-
-  --flame-glow: 0 0 20px rgba(234, 88, 12, 0.25);
+  --earth-warm: #c43809;
+  --earth-warm-dark: #9a2b06;
+  --earth-warm-soft: rgba(196, 56, 9, 0.08);
 
   /* Fallback aliases */
   --gold-champagne: var(--nature-green);
   --sage-accent: var(--nature-green);
 
+  /* Yuqori kontrastli, ko'rinadigan matnlar (Light Mode) */
   --text-pure: #09090b;
   --text-primary: #18181b;
-  --text-secondary: #52525b;
-  --text-tertiary: #71717a;
+  --text-secondary: #3f3f46;
+  --text-tertiary: #52525b;
 
   --input-bg: #f4f4f5;
-  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-bg: rgba(255, 255, 255, 0.96);
 
-  --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.05);
-  --shadow-elevated: 0 14px 36px -8px rgba(0, 0, 0, 0.1);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 6px 20px -4px rgba(0, 0, 0, 0.07);
 }
 
 /* Reset */
@@ -122,10 +120,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(ellipse at 50% -12%, rgba(255, 107, 0, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 15% 20%, rgba(255, 255, 255, 0.035) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 55%, rgba(255, 122, 24, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(255, 107, 0, 0.07) 0%, transparent 60%);
+    radial-gradient(ellipse at 50% -10%, rgba(249, 115, 22, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 60%, rgba(249, 115, 22, 0.03) 0%, transparent 45%);
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.68;
@@ -135,9 +131,7 @@ body {
 
 [data-theme="light"] body {
   background-image: 
-    radial-gradient(ellipse at 50% -8%, rgba(255, 107, 0, 0.1) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 30%, rgba(0, 0, 0, 0.02) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 65%, rgba(255, 122, 24, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse at 50% -10%, rgba(234, 88, 12, 0.04) 0%, transparent 55%);
 }
 
 ::-webkit-scrollbar {
@@ -148,7 +142,7 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(120, 120, 130, 0.25);
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -216,9 +210,10 @@ button {
   top: 0;
   z-index: 100;
   background: var(--nav-bg);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-hairline);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   padding: 11px 0;
   transition: background-color var(--transition-gentle), border-color var(--transition-gentle);
 }
@@ -255,7 +250,7 @@ button {
   font-family: var(--font-friendly);
   font-size: 20px;
   font-weight: 800;
-  box-shadow: 0 3px 14px rgba(255, 107, 0, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .brand-info h1 {
@@ -314,9 +309,9 @@ button {
 
 .nav-link-btn.active {
   color: #ffffff;
-  background: var(--trust-blue);
+  background: var(--nature-green);
   font-weight: 700;
-  box-shadow: 0 2px 10px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 .nav-link-btn.active svg {
   stroke: #ffffff;
@@ -482,7 +477,7 @@ button {
   color: #ffffff;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all var(--transition-gentle);
 }
 .btn-gold-elegant:hover,
@@ -490,7 +485,7 @@ button {
 .btn-primary:hover {
   background: var(--trust-blue-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .btn-nature {
@@ -504,7 +499,7 @@ button {
   color: #ffffff;
   font-size: 14.5px;
   font-weight: 700;
-  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all var(--transition-gentle);
 }
 .btn-nature:hover {
