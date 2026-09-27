@@ -2,7 +2,7 @@
 // BUNYOD PLATFORMASI - ASOSIY ILOVA (APP ROUTER & CONTROLLER)
 // ==========================================================================
 
-import { i18nManager } from './i18n.js';
+import { i18nManager } from './i18n.js?v=20260927_brand';
 import { authManager } from './auth.js';
 import { quotesManager } from './quotes.js';
 import { coursesManager } from './courses.js';
@@ -61,11 +61,48 @@ class BunyodApp {
     document.querySelectorAll('.nav-link-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const view = btn.dataset.view;
+        if (view === 'more') {
+          this.toggleMobileMoreSheet(true);
+        } else {
+          this.navigateTo(view);
+        }
+      });
+    });
+
+    // Mobil "Yana" menyu sheet hodisalari
+    const overlay = document.getElementById('mobileMoreOverlay');
+    const closeBtn = document.getElementById('closeMobileMoreBtn');
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) this.toggleMobileMoreSheet(false);
+      });
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => this.toggleMobileMoreSheet(false));
+    }
+
+    document.querySelectorAll('.sheet-item-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const view = card.dataset.view;
         this.navigateTo(view);
+        this.toggleMobileMoreSheet(false);
       });
     });
 
     window.navigateTo = (view) => this.navigateTo(view);
+    window.toggleMobileMoreSheet = (show) => this.toggleMobileMoreSheet(show);
+  }
+
+  toggleMobileMoreSheet(show) {
+    const overlay = document.getElementById('mobileMoreOverlay');
+    if (!overlay) return;
+    if (show) {
+      overlay.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    } else {
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
   }
 
   navigateTo(viewName) {
@@ -73,8 +110,19 @@ class BunyodApp {
     window.location.hash = viewName;
 
     // Nav tugmalarini faollashtirish
+    const isMoreChild = ['tasks', 'diagnostics', 'calm', 'dashboard'].includes(viewName);
     document.querySelectorAll('.nav-link-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.view === viewName);
+      if (btn.id === 'mobileMoreNavBtn') {
+        btn.classList.toggle('active', isMoreChild);
+      } else {
+        const isActive = btn.dataset.view === viewName;
+        btn.classList.toggle('active', isActive);
+      }
+    });
+
+    // Sheet ichidagi kartalarni ham faollashtirish
+    document.querySelectorAll('.sheet-item-card').forEach(card => {
+      card.classList.toggle('active', card.dataset.view === viewName);
     });
 
     // Bo'limlarni ko'rsatish/yashirish

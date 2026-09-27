@@ -65,6 +65,12 @@
   box-shadow: var(--shadow-subtle);
 }
 
+[data-theme="light"] .quote-master-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 14px -2px rgba(0, 0, 0, 0.05);
+}
+
 .quote-progress-track {
   position: absolute;
   top: 0;
@@ -2071,6 +2077,12 @@
   border: 1px solid rgba(220, 80, 80, 0.25);
 }
 
+[data-theme="light"] .symptom-tag.visible {
+  background: rgba(220, 38, 38, 0.08);
+  color: #dc2626;
+  border-color: rgba(220, 38, 38, 0.2);
+}
+
 .symptom-tag.hidden-root {
   background: var(--nature-green-soft);
   color: var(--nature-green);
@@ -2589,6 +2601,177 @@
   font-weight: 700;
   color: var(--nature-green);
   letter-spacing: 0.05em;
+}
+
+/* --- MOBIL "YANA" MENYU BOTTOM SHEET --- */
+.mobile-more-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mobile-more-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-more-sheet {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-card);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border: 1px solid var(--border-hairline);
+  border-bottom: none;
+  padding: 12px 18px calc(24px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-more-overlay.visible .mobile-more-sheet {
+  transform: translateY(0);
+}
+
+.mobile-sheet-drag-handle {
+  width: 40px;
+  height: 4px;
+  background: var(--border-hairline);
+  border-radius: 4px;
+  margin: 0 auto 14px;
+}
+
+.mobile-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.sheet-title-group h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-pure);
+  margin: 0;
+}
+
+.sheet-title-group p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 2px 0 0;
+}
+
+.mobile-sheet-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card-hover);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile-sheet-close-btn svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
+.mobile-sheet-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sheet-item-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.sheet-item-card:hover, .sheet-item-card:active {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+}
+
+.sheet-item-card.active {
+  background: var(--nature-green-soft);
+  border-color: var(--nature-green);
+}
+
+.sheet-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sheet-item-icon.tasks-icon { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.sheet-item-icon.diag-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.sheet-item-icon.calm-icon { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.sheet-item-icon.dash-icon { background: rgba(249, 115, 22, 0.1); color: #f97316; }
+
+.sheet-item-icon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.sheet-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sheet-item-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.sheet-item-desc {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.sheet-item-arrow {
+  color: var(--text-tertiary);
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.sheet-item-card:hover .sheet-item-arrow {
+  transform: translateX(3px);
+  color: var(--nature-green);
 }
 
 

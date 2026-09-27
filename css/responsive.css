@@ -1,7 +1,18 @@
 /* ==========================================================================
-   BUNYOD PLATFORMASI - TO'LIQ MOBIL VA PLANSHET MOSLASHUVCHANLIGI (RESPONSIVE)
-   Qamrov: Kichik smartfonlar (320px - 480px), Planshetlar (768px - 1024px), Desktop
+   BUNYOD PLATFORMASI - TO'LIQ MOBIL, PLANSHET VA DESKTOP MOSLASHUVCHANLIGI
+   Qamrov: Kichik smartfonlar (320px - 480px), Standart smartfonlar (480px - 640px),
+           Planshetlar (640px - 900px), Laptoplar (900px - 1240px), Katta ekranlar (1240px+)
    ========================================================================== */
+
+/* Umumiy xavfsizlik: hech qanday qurilmada gorizontal siljish (horizontal scroll) bo'lmasligi */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img, video, canvas {
+  max-width: 100%;
+}
 
 /* --- LAPTOP VA O'RTA EKRANLAR (MAX-WIDTH: 1240px) --- */
 @media (max-width: 1240px) {
@@ -9,20 +20,24 @@
     padding: 0 16px;
   }
   .nav-link-btn {
-    padding: 6px 10px;
-    font-size: 12.5px;
+    padding: 6px 9px;
+    font-size: 12px;
     gap: 5px;
   }
   .nav-link-btn svg {
     width: 14px;
     height: 14px;
   }
+  .user-meta-pills .meta-pill.streak {
+    display: none;
+  }
 }
 
 /* --- PLANSHETLAR VA O'RTA EKRANLAR (MAX-WIDTH: 1024px) --- */
 @media (max-width: 1024px) {
   .brand-info span {
-    display: none;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
   }
 
   .user-meta-pills .meta-pill.streak,
@@ -31,12 +46,13 @@
   }
 
   .nav-link-btn {
-    padding: 6px 8px;
-    font-size: 11.5px;
+    padding: 5px 7px;
+    font-size: 11px;
+    gap: 4px;
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
   .learning-studio-grid {
@@ -58,32 +74,44 @@
   }
 
   .hero-title {
-    font-size: 38px;
+    font-size: 34px;
   }
 
   .quote-body-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
-/* --- MOBIL QURILMALAR (MAX-WIDTH: 860px) --- */
-@media (max-width: 860px) {
+/* --- MOBIL VA PLANSHETLAR PORTRET REJIMI (MAX-WIDTH: 900px) --- */
+@media (max-width: 900px) {
   :root {
     --radius-lg: 18px;
     --radius-md: 14px;
   }
 
   body {
-    padding-bottom: 74px; /* Mobil pastki navigatsiya uchun joy */
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   }
 
   .container {
     padding: 0 16px;
   }
 
-  /* Header - Ixcham mobil ko'rinish */
+  /* Header - Ixcham mobil ko'rinish (backdrop-filter olib tashlandi - fixed nav containment xatosini oldini olish uchun) */
   .site-header {
-    padding: 10px 0;
+    padding: 8px 0;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-hairline);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .site-header .container {
+    padding: 0 14px;
   }
 
   .header-inner {
@@ -91,102 +119,76 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 10px;
+    width: 100%;
+    gap: 8px;
   }
 
   .brand-area {
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
   }
 
-  .brand-monogram {
+  .brand-logo-img {
     width: 34px;
     height: 34px;
-    font-size: 18px;
   }
 
   .brand-info h1 {
-    font-size: 19px;
+    font-size: 16px;
+    letter-spacing: 0.03em;
   }
 
   .brand-info span {
-    font-size: 10px;
-    letter-spacing: 0.05em;
+    font-size: 8px;
+    letter-spacing: 0.06em;
+    display: block;
   }
 
-  /* Yuqori navigatsiya pill bar - mobil pastki app-bar ga aylanadi */
-  .nav-pill-group {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: var(--bg-elevated);
-    border-radius: 0;
-    border: none;
-    border-top: 1px solid var(--border-hairline);
-    padding: 6px 4px;
-    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
-    display: flex;
-    justify-content: space-between;
-    gap: 1px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-
-  .nav-link-btn {
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-    gap: 2px;
-    padding: 5px 2px;
-    font-size: 9.5px;
-    font-weight: 700;
-    border-radius: var(--radius-xs);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .nav-link-btn span {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .nav-link-btn svg {
-    width: 17px;
-    height: 17px;
-    margin: 0 auto;
-  }
-
-  .nav-link-btn.active {
-    box-shadow: none;
-    border-radius: var(--radius-xs);
-  }
-
-  /* Header boshqaruv elementlari (Til, Rejim, Profil) */
+  /* Header boshqaruv elementlari: Til, Rejim (Light/Dark), Profil */
   .header-controls-group {
+    display: flex;
+    align-items: center;
     gap: 6px;
+    flex-shrink: 0;
   }
 
   .lang-select-btn {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 4px 8px;
+    font-size: 11.5px;
+    gap: 4px;
+    height: 32px;
+  }
+
+  .lang-select-btn svg {
+    width: 13px;
+    height: 13px;
   }
 
   .theme-toggle-btn {
     width: 32px;
     height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .theme-toggle-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .user-meta-pills {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .user-meta-pills .meta-pill.streak,
   .user-meta-pills .meta-pill.xp {
-    display: none; /* Mobilda joyni tejash uchun pastki kabinetda ko'rsatiladi */
+    display: none; /* Mobilda pastki Kabinet bo'limida ko'rsatiladi */
   }
 
   #headerProfileBtn {
@@ -199,19 +201,80 @@
     border-radius: var(--radius-full);
   }
 
+  /* 5 ta qulay mobil pastki tugma (Desktopda 8 ta) */
+  .nav-btn-desktop-only {
+    display: none !important;
+  }
+
+  .nav-btn-mobile-only {
+    display: inline-flex !important;
+  }
+
+  .nav-pill-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg-card);
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-hairline);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+    box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-link-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 2px;
+    font-size: 10.5px;
+    font-weight: 600;
+    border-radius: var(--radius-xs);
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .nav-link-btn span {
+    font-size: 10px;
+    line-height: 1.2;
+    overflow: visible;
+  }
+
+  .nav-link-btn svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .nav-link-btn.active {
+    box-shadow: none;
+    border-radius: var(--radius-xs);
+  }
+
   /* Hero Bo'limi */
   .hero-section {
-    padding: 16px 0 32px;
+    padding: 16px 0 28px;
   }
 
   .hero-tagline {
     font-size: 11px;
     padding: 4px 12px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: clamp(22px, 5.5vw, 30px);
     line-height: 1.3;
     margin-bottom: 12px;
   }
@@ -219,18 +282,18 @@
   .hero-desc {
     font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   /* Iqtibos Kartasi */
   .quote-master-card {
-    padding: 22px 18px 20px;
-    margin-bottom: 28px;
+    padding: 18px 16px;
+    margin-bottom: 24px;
     border-radius: var(--radius-md);
   }
 
   .quote-header-meta {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .quote-category-tag {
@@ -239,62 +302,223 @@
   }
 
   .quote-body-text {
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 19px);
     line-height: 1.55;
-    min-height: 65px;
-    margin-bottom: 18px;
+    min-height: 60px;
+    margin-bottom: 16px;
   }
 
   .author-credentials {
-    gap: 10px;
+    gap: 8px;
   }
 
   .author-monogram {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 
   .author-names h5 {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
   .author-names p {
-    font-size: 11.5px;
+    font-size: 11px;
   }
 
   .quote-nav-arrow {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   /* Asosiy 3 xususiyat kartalari */
   .features-trio {
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: 24px;
+    gap: 12px;
+    margin-top: 20px;
   }
 
   .feature-mini-card {
-    padding: 20px 18px;
+    padding: 18px 16px;
   }
 
   /* CTA tugmalari */
   .hero-section div[style*="display: flex; justify-content: center; gap: 16px;"] {
     flex-direction: column;
-    gap: 10px !important;
-    margin-top: 28px !important;
+    gap: 8px !important;
+    margin-top: 24px !important;
   }
 
   .btn-gold-elegant, .btn-outline-elegant {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 18px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Hayot Pasporti Bo'limi */
+  .passport-hero-wrap {
+    padding: 24px 14px;
+    margin-bottom: 24px;
+  }
+
+  .passport-main-title {
+    font-size: clamp(22px, 5.5vw, 30px);
+    line-height: 1.25;
+  }
+
+  .passport-lead-desc {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .passport-central-question-box {
+    padding: 18px 16px;
+  }
+
+  .passport-central-question-box h3 {
+    font-size: clamp(18px, 4.5vw, 22px);
+  }
+
+  .passport-spotlight-card {
+    padding: 20px 16px;
+    margin: 24px 0 0;
+  }
+
+  .passport-spotlight-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .spotlight-right-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .spotlight-mini-stat {
+    padding: 14px 10px;
+  }
+
+  .mini-stat-num {
+    font-size: 22px;
+  }
+
+  .mini-stat-label {
+    font-size: 10.5px;
+  }
+
+  .block-header-center {
+    margin-bottom: 20px;
+  }
+
+  .block-title {
+    font-size: clamp(20px, 4.8vw, 24px);
+  }
+
+  .block-desc {
+    font-size: 14px;
+  }
+
+  .symptom-root-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .symptom-card {
+    padding: 18px 16px;
+  }
+
+  .passport-nav-pills-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+  }
+
+  .passport-nav-pills-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .passport-nav-pill {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+
+  .nav-question-stage {
+    padding: 20px 16px;
+  }
+
+  .nav-q-title {
+    font-size: clamp(18px, 4.5vw, 22px);
+  }
+
+  .nav-q-summary {
+    font-size: 13.5px;
+  }
+
+  .nav-q-detail {
+    padding: 14px 14px;
+    font-size: 13.5px;
+  }
+
+  .persona-tabs-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+  }
+
+  .persona-tabs-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .persona-tab-btn {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    font-size: 12.5px;
+  }
+
+  .persona-insight-card {
+    padding: 20px 16px;
+  }
+
+  .persona-card-title {
+    font-size: 18px;
+  }
+
+  .dimensions-tags-cloud {
+    gap: 6px;
+  }
+
+  .dim-tag {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .passport-final-creed {
+    padding: 24px 16px;
+    margin: 0 auto 30px;
+  }
+
+  .passport-final-creed h3 {
+    font-size: 22px;
+  }
+
+  .creed-text {
     font-size: 14px;
   }
 
   /* Kurslar & Video Studio */
   .section-main-title {
-    font-size: 24px;
+    font-size: clamp(20px, 4.8vw, 24px);
   }
 
   .course-switcher {
@@ -303,25 +527,27 @@
     padding-bottom: 8px;
     gap: 8px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+
   .course-switcher::-webkit-scrollbar {
     display: none;
   }
 
   .course-tab-btn {
-    padding: 7px 16px;
-    font-size: 13px;
+    padding: 7px 14px;
+    font-size: 12.5px;
     flex-shrink: 0;
   }
 
   .lesson-meta-bar {
     flex-direction: column;
-    padding: 18px;
-    gap: 14px;
+    padding: 16px 14px;
+    gap: 12px;
   }
 
   .lesson-details-text h2 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .lesson-action-pills {
@@ -332,47 +558,49 @@
   .complete-status-btn {
     width: 100%;
     justify-content: center;
-    padding: 10px 16px;
+    padding: 10px 14px;
   }
 
   .lesson-sub-tabs {
-    padding: 0 16px;
+    padding: 0 14px;
     overflow-x: auto;
     scrollbar-width: none;
-    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
   }
+
   .lesson-sub-tabs::-webkit-scrollbar {
     display: none;
   }
 
   .sub-tab-btn {
     flex-shrink: 0;
-    font-size: 13px;
-    padding: 12px 4px;
+    font-size: 12.5px;
+    padding: 10px 4px;
   }
 
   .sub-content-panel {
-    padding: 18px 16px;
+    padding: 16px 14px;
   }
 
   /* Vazifalar */
   .tasks-container-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
   }
 
   .task-card {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
   /* Diagnostika */
   .wheel-canvas-box {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
   #lifeWheelCanvas {
     width: 100%;
-    max-width: 290px;
+    max-width: 280px;
     height: auto;
   }
 
@@ -380,17 +608,19 @@
     flex-wrap: wrap;
     gap: 6px;
   }
+
   .wheel-slider-row label {
     width: 100%;
     flex: none;
-    font-size: 13px;
+    font-size: 12.5px;
   }
+
   .wheel-slider-row input[type="range"] {
     flex: 1;
   }
 
   .quiz-card-box {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
   .quiz-options-group {
@@ -400,46 +630,47 @@
 
   /* Sokinlik / Nafas */
   .calm-zone-container {
-    padding: 30px 18px;
+    padding: 24px 14px;
   }
 
   .calm-zone-container .serif-title {
-    font-size: 28px !important;
+    font-size: clamp(22px, 5vw, 28px) !important;
   }
 
   .breathing-stage {
-    width: 230px;
-    height: 230px;
-    margin: 24px 0;
+    width: 210px;
+    height: 210px;
+    margin: 20px auto;
   }
 
   .breathing-orb-core {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 
   .breath-phase-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* Kabinet */
   .guest-alert-banner {
     flex-direction: column;
     align-items: stretch;
-    padding: 16px;
-    gap: 14px;
+    padding: 14px;
+    gap: 12px;
   }
 
   .user-profile-header-card {
     flex-direction: column;
     align-items: flex-start;
-    padding: 18px 16px;
-    gap: 16px;
+    padding: 16px 14px;
+    gap: 14px;
   }
 
   .user-profile-header-card > div:last-child {
     width: 100%;
   }
+
   .user-profile-header-card .btn-gold-elegant,
   .user-profile-header-card .btn-outline-elegant {
     width: 100%;
@@ -447,27 +678,30 @@
 
   .dashboard-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
 
   .metric-stat-card {
-    padding: 16px 14px;
+    padding: 14px 12px;
   }
 
   .metric-stat-card h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   /* Auth Modali */
   .auth-modal-box {
-    padding: 26px 20px;
+    padding: 22px 16px;
+    width: 92%;
+    max-width: 400px;
     border-radius: var(--radius-md);
   }
+
   /* Kitoblar bo'limi - Mobil moslashuv */
   .books-toolbar-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
 
   .books-categories-group {
@@ -476,7 +710,9 @@
     padding-bottom: 4px;
     flex-wrap: nowrap;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+
   .books-categories-group::-webkit-scrollbar {
     display: none;
   }
@@ -488,17 +724,18 @@
 
   .books-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .book-preview-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .book-modal-box {
-    padding: 22px 18px;
-    width: 95%;
+    padding: 20px 16px;
+    width: 94%;
+    max-width: 480px;
   }
 
   .payment-methods-selector {
@@ -506,25 +743,61 @@
   }
 }
 
-/* --- KICHIK SMARTFONLAR (MAX-WIDTH: 360px) --- */
+/* --- STANDART VA KICHIK SMARTFONLAR (MAX-WIDTH: 480px) --- */
+@media (max-width: 480px) {
+  .spotlight-right-features {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-info h1 {
+    font-size: 16px;
+  }
+
+  .brand-monogram {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .lang-select-btn {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .theme-toggle-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  #headerProfileBtn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* --- JUDA KICHIK SMARTFONLAR (MAX-WIDTH: 360px) --- */
 @media (max-width: 360px) {
   .dashboard-metrics-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-title {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .hero-desc {
+    font-size: 13px;
   }
 
   .quote-body-text {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .brand-info h1 {
-    font-size: 17px;
+    font-size: 15px;
   }
 
-  .nav-link-btn {
-    font-size: 8.5px;
+  .nav-link-btn span {
+    font-size: 9px;
   }
 }

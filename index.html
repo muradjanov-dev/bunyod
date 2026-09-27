@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="uz" data-theme="dark">
+<html lang="uz" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bunyod — Inson va Uning Butun Hayot Tizimi</title>
-  <meta name="description" content="Inson va uning butun hayot tizimi — Yo'nalish pasporti, hayotiy navigatsiya va shaxsiy muvozanat ekotizimi.">
+  <title>Bunyodkor — Inson Navigatsiyasi</title>
+  <meta name="description" content="Bunyodkor: Inson navigatsiyasi — Angla, tanla, amal qil, bunyod et.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/main.css?v=20260927_brand">
+  <link rel="stylesheet" href="css/components.css?v=20260927_brand">
+  <link rel="stylesheet" href="css/responsive.css?v=20260927_brand">
 </head>
 <body>
 
   <!-- ASOSIY HEADER & NAVIGATSIYA -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand-area">
-        <div class="brand-monogram" data-i18n="brand_monogram">B</div>
+      <div class="brand-area" onclick="window.navigateTo('home')" style="cursor: pointer;" title="Bunyodkor — Asosiy sahifa">
+        <img src="assets/logo.svg" alt="Bunyodkor" class="brand-logo-img">
         <div class="brand-info">
-          <h1 data-i18n="brand_name">BUNYOD</h1>
-          <span data-i18n="brand_sub">Inson & Hayot Tizimi</span>
+          <h1 data-i18n="brand_name">BUNYODKOR</h1>
+          <span data-i18n="brand_sub">Inson Navigatsiyasi</span>
         </div>
       </div>
 
-      <!-- Navigatsiya Tugmalari -->
+      <!-- Navigatsiya Tugmalari (Desktopda 8 ta, Mobilda 5 ta qulay tugma) -->
       <nav class="nav-pill-group">
         <button class="nav-link-btn active" data-view="home">
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -41,21 +42,26 @@
           <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           <span data-i18n="nav_books">Kitoblar</span>
         </button>
-        <button class="nav-link-btn" data-view="tasks">
+        <button class="nav-link-btn nav-btn-desktop-only" data-view="tasks">
           <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
           <span data-i18n="nav_tasks">Vazifalar</span>
         </button>
-        <button class="nav-link-btn" data-view="diagnostics">
+        <button class="nav-link-btn nav-btn-desktop-only" data-view="diagnostics">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
           <span data-i18n="nav_diagnostics">Diagnostika</span>
         </button>
-        <button class="nav-link-btn" data-view="calm">
+        <button class="nav-link-btn nav-btn-desktop-only" data-view="calm">
           <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
           <span data-i18n="nav_calm">Sokinlik</span>
         </button>
-        <button class="nav-link-btn" data-view="dashboard">
+        <button class="nav-link-btn nav-btn-desktop-only" data-view="dashboard">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
           <span data-i18n="nav_dashboard">Kabinet</span>
+        </button>
+        <!-- Mobil uchun ixcham "Yana" (Menyu) tugmasi -->
+        <button class="nav-link-btn nav-btn-mobile-only" id="mobileMoreNavBtn" data-view="more" title="Boshqa bo'limlar">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"></circle><circle cx="19" cy="12" r="2.5"></circle><circle cx="5" cy="12" r="2.5"></circle></svg>
+          <span data-i18n="nav_more">Yana</span>
         </button>
       </nav>
 
@@ -76,8 +82,8 @@
         </div>
 
         <!-- Kunduzgi / Tungi Rejim Almashtirgich -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" title="Rejimni almashtirish">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Tungi rejim">
+          <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
         <div class="user-meta-pills">
@@ -100,12 +106,15 @@
   <main>
     <section id="view-home" class="view-panel active">
       <div class="container hero-section">
-        <div class="hero-tagline" data-i18n="hero_tag">✦ Inson va Uning Butun Hayot Tizimi</div>
+        <div class="hero-tagline" data-i18n="hero_tag">✦ Inson Navigatsiyasi</div>
         <h2 class="hero-title">
           <span data-i18n="hero_title_pre">O'zligingizni chuqur anglang, hayotingizni</span>
-          <em data-i18n="hero_title_em">bunyod</em>
+          <em data-i18n="hero_title_em">bunyodkor</em>
           <span data-i18n="hero_title_post">eting</span>
         </h2>
+        <div class="hero-slogan-wrap">
+          <span class="hero-slogan-badge" data-i18n="hero_slogan">Angla, tanla, amal qil, bunyod et</span>
+        </div>
         <p class="hero-desc" data-i18n="hero_desc">
           Inson, uning ruhiyati, biznesi, oilasi va maqsadlari yaxlit tizimda. Qayerdaligingizni anglang, to'g'ri tashxis qo'ying va hayotingizni ongli bunyod eting.
         </p>
@@ -924,7 +933,69 @@
     </div>
   </div>
 
-  <script type="module" src="js/books.js"></script>
-  <script type="module" src="js/app.js"></script>
+  <!-- MOBIL "YANA" MENYU SHEET (PASTDAN CHIQADIGAN BOSHQARUV) -->
+  <div class="mobile-more-overlay" id="mobileMoreOverlay">
+    <div class="mobile-more-sheet" id="mobileMoreSheet">
+      <div class="mobile-sheet-drag-handle"></div>
+      <div class="mobile-sheet-header">
+        <div class="sheet-title-group">
+          <h4 data-i18n="more_menu_title">Barcha Bo'limlar</h4>
+          <p data-i18n="more_menu_sub">Bunyod ekotizimi xizmatlari</p>
+        </div>
+        <button class="mobile-sheet-close-btn" id="closeMobileMoreBtn" aria-label="Yopish">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="mobile-sheet-grid">
+        <button class="sheet-item-card" data-view="tasks">
+          <div class="sheet-item-icon tasks-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          </div>
+          <div class="sheet-item-info">
+            <span class="sheet-item-name" data-i18n="nav_tasks">Vazifalar</span>
+            <span class="sheet-item-desc" data-i18n="more_tasks_desc">Amaliy mashqlar & kunlik rejalar</span>
+          </div>
+          <span class="sheet-item-arrow">→</span>
+        </button>
+
+        <button class="sheet-item-card" data-view="diagnostics">
+          <div class="sheet-item-icon diag-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <div class="sheet-item-info">
+            <span class="sheet-item-name" data-i18n="nav_diagnostics">Diagnostika</span>
+            <span class="sheet-item-desc" data-i18n="more_diag_desc">8 ta hayotiy soha balansi & test</span>
+          </div>
+          <span class="sheet-item-arrow">→</span>
+        </button>
+
+        <button class="sheet-item-card" data-view="calm">
+          <div class="sheet-item-icon calm-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
+          </div>
+          <div class="sheet-item-info">
+            <span class="sheet-item-name" data-i18n="nav_calm">Sokinlik</span>
+            <span class="sheet-item-desc" data-i18n="more_calm_desc">Nafas mashqlari & xotirjamlik</span>
+          </div>
+          <span class="sheet-item-arrow">→</span>
+        </button>
+
+        <button class="sheet-item-card" data-view="dashboard">
+          <div class="sheet-item-icon dash-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          </div>
+          <div class="sheet-item-info">
+            <span class="sheet-item-name" data-i18n="nav_dashboard">Kabinet</span>
+            <span class="sheet-item-desc" data-i18n="more_dash_desc">Shaxsiy rivojlanish & profil</span>
+          </div>
+          <span class="sheet-item-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/books.js?v=20260927_brand"></script>
+  <script type="module" src="js/app.js?v=20260927_brand"></script>
 </body>
 </html>

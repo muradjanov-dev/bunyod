@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Asosiy To'q Ko'k / Teal Gradienti -->
+    <linearGradient id="bgRingGrad" x1="15%" y1="85%" x2="85%" y2="15%">
+      <stop offset="0%" stop-color="#072b49" />
+      <stop offset="50%" stop-color="#0f506e" />
+      <stop offset="100%" stop-color="#1a859b" />
+    </linearGradient>
+
+    <!-- Oltin / Qadriyat Gradienti -->
+    <linearGradient id="goldWingGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b67f33" />
+      <stop offset="45%" stop-color="#d8a353" />
+      <stop offset="100%" stop-color="#f0cb7c" />
+    </linearGradient>
+
+    <!-- Parvoz / Qanot Gradienti -->
+    <linearGradient id="flightWingGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#1ea0b6" />
+      <stop offset="55%" stop-color="#146781" />
+      <stop offset="100%" stop-color="#093150" />
+    </linearGradient>
+
+    <!-- Qush Boshi va Tanasi Gradienti -->
+    <linearGradient id="birdBodyGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a3a5c" />
+      <stop offset="40%" stop-color="#17768e" />
+      <stop offset="100%" stop-color="#24adc4" />
+    </linearGradient>
+
+    <!-- Soyalar va yumshoqlik -->
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#072b49" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- 1. TASHQI HALQA: Yuqori O'ng Oltin Qism (Gold Arc) -->
+    <path d="M 88 38 C 118 36, 148 48, 164 72 C 168 78, 172 86, 173 95 C 167 92, 163 85, 158 80 C 144 63, 120 52, 95 50 C 89 49, 83 49, 81 48 Z" 
+          fill="url(#goldWingGrad)" />
+
+    <!-- 2. TASHQI HALQA: Asosiy To'q Moviy/Teal Doiraviy Girdob -->
+    <path d="M 52 144 C 42 128, 40 106, 46 88 C 50 76, 57 66, 66 58 C 69 55, 73 53, 76 50 C 74 54, 71 58, 69 63 C 60 76, 56 94, 60 110 C 65 130, 80 148, 100 156 C 122 165, 148 160, 165 144 C 172 137, 178 128, 180 119 C 180 134, 172 149, 161 159 C 143 176, 115 182, 91 177 C 72 173, 56 160, 52 144 Z" 
+          fill="url(#bgRingGrad)" />
+
+    <!-- 3. ICHKI HALQA QUYI DOIRAVIY YOY (Pastki Qanot Bilan Tutashuv) -->
+    <path d="M 44 148 C 40 134, 43 118, 48 105 C 50 114, 55 125, 62 134 C 73 147, 90 156, 107 158 C 124 160, 142 154, 154 143 C 142 151, 126 154, 111 152 C 94 150, 78 141, 68 129 C 61 121, 57 111, 56 101 C 53 112, 53 125, 57 136 C 60 144, 66 151, 72 156 C 61 156, 51 153, 44 148 Z" 
+          fill="#0c3d5e" />
+
+    <!-- 4. PASTKI OLTI QANOT (Oltin Rangli Ko'krak Va Qanot Asosi) -->
+    <path d="M 58 124 C 64 120, 72 118, 79 116 C 92 112, 104 108, 114 99 C 111 106, 106 113, 99 118 C 91 124, 82 129, 74 135 C 67 141, 60 149, 58 158 C 55 146, 56 133, 58 124 Z" 
+          fill="url(#goldWingGrad)" />
+
+    <!-- 5. QUSH QANOTI: 1-ASOSIY KATTA QANOT (Teal / Navy Wing Feather) -->
+    <path d="M 55 42 C 60 56, 68 72, 75 87 C 82 101, 89 116, 92 131 C 88 123, 85 113, 80 103 C 74 90, 66 77, 59 64 C 55 57, 52 49, 55 42 Z" 
+          fill="url(#flightWingGrad)" />
+
+    <!-- 6. QUSH QANOTI: 2-O'RTA PARVOZ PATI (Dynamic Middle Wing Feather) -->
+    <path d="M 68 49 C 76 63, 84 79, 93 94 C 99 104, 106 114, 113 123 C 108 116, 103 107, 98 97 C 91 84, 84 70, 75 58 C 72 54, 70 51, 68 49 Z" 
+          fill="#166e85" />
+
+    <!-- 7. QUSH QANOTI: 3-YUQORI KO'K PAT (Cyan/Teal Accent Feather) -->
+    <path d="M 83 60 C 93 74, 102 90, 112 105 C 115 110, 119 116, 122 122 C 118 115, 114 107, 109 98 C 101 84, 93 71, 85 61 Z" 
+          fill="#1fa6be" />
+
+    <!-- 8. QUSH BOSHI VA TANASI (Soaring Bird Body & Beak to Upper Right) -->
+    <path d="M 98 108 C 108 98, 119 90, 131 84 C 139 80, 149 76, 158 75 C 163 74, 172 73, 176 72 C 168 77, 159 83, 152 89 C 144 96, 137 104, 131 113 C 124 122, 119 132, 115 142 C 113 133, 110 125, 106 118 C 103 114, 100 111, 98 108 Z" 
+          fill="url(#birdBodyGrad)" />
+
+    <!-- 9. KO'KRAK VA BO'YIN CHIZIG'I (Subtle Under-Beak Accent) -->
+    <path d="M 132 84 C 143 80, 155 77, 167 75 C 158 80, 150 86, 143 93 C 137 99, 132 106, 127 114 C 128 106, 130 96, 132 84 Z" 
+          fill="#31b8cf" />
+          
+    <!-- 10. DUMNING NAZOKATLI BURILISHI (Elegant Tail Swoosh at Bottom Left) -->
+    <path d="M 52 144 C 54 154, 57 165, 62 174 C 60 166, 56 157, 53 148 C 50 140, 48 131, 46 122 C 45 131, 48 140, 52 144 Z" 
+          fill="#082d49" />
+  </g>
+</svg>

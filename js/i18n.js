@@ -2,12 +2,12 @@
 // BUNYOD PLATFORMASI - TILLAR VA REJIMLAR BOSHQARUVCHISI (I18N & THEME)
 // ==========================================================================
 
-import { translations } from './translations.js';
+import { translations } from './translations.js?v=20260927_brand';
 
 class I18nManager {
   constructor() {
     this.currentLang = localStorage.getItem('bunyod_lang') || 'uz';
-    this.currentTheme = localStorage.getItem('bunyod_theme') || 'dark';
+    this.currentTheme = localStorage.getItem('bunyod_theme') || 'light';
     this.listeners = [];
   }
 
