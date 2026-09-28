@@ -34,12 +34,13 @@ class QuotesManager {
 
     if (!this.quoteText) return;
 
-    this.renderCurrentQuote();
+    window.quotesManager = this;
+    this.renderCurrentQuote(true);
     this.startAutoRotate();
     this.bindEvents();
 
-    i18nManager.onLanguageChange(() => {
-      this.renderCurrentQuote();
+    i18nManager.onLanguageChange((lang) => {
+      this.renderCurrentQuote(true);
     });
   }
 
@@ -72,15 +73,12 @@ class QuotesManager {
     }
   }
 
-  renderCurrentQuote() {
+  renderCurrentQuote(immediate = false) {
     const quotes = this.getQuotes();
     const q = quotes[this.currentIndex] || quotes[0];
     if (!q) return;
 
-    this.quoteText.style.opacity = '0';
-    this.quoteText.style.transform = 'translateY(6px)';
-
-    setTimeout(() => {
+    const applyData = () => {
       this.quoteText.textContent = `«${q.text}»`;
       this.quoteAuthor.textContent = q.author;
       this.quoteSource.textContent = q.source;
@@ -91,7 +89,17 @@ class QuotesManager {
 
       this.quoteText.style.opacity = '1';
       this.quoteText.style.transform = 'translateY(0)';
-    }, 180);
+    };
+
+    if (immediate) {
+      applyData();
+      return;
+    }
+
+    this.quoteText.style.opacity = '0';
+    this.quoteText.style.transform = 'translateY(6px)';
+
+    setTimeout(applyData, 180);
   }
 
   nextQuote() {

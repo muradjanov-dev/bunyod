@@ -2,7 +2,7 @@
 // BUNYOD PLATFORMASI - ASOSIY ILOVA (APP ROUTER & CONTROLLER)
 // ==========================================================================
 
-import { i18nManager } from './i18n.js?v=20260927_brand';
+import { i18nManager } from './i18n.js';
 import { authManager } from './auth.js';
 import { quotesManager } from './quotes.js';
 import { coursesManager } from './courses.js';

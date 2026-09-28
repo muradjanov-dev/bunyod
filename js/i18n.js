@@ -164,4 +164,4 @@ class I18nManager {
   }
 }
 
-export const i18nManager = new I18nManager();
+export const i18nManager = (window.__i18nManager = window.__i18nManager || new I18nManager());
