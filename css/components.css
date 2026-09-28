@@ -97,8 +97,7 @@
 .quote-category-tag {
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--nature-green);
   padding: 4px 14px;
   border-radius: var(--radius-full);
@@ -297,8 +296,7 @@
 .section-eyebrow {
   font-size: 12.5px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   color: var(--nature-green);
   margin-bottom: 4px;
 }
@@ -777,8 +775,7 @@
 .task-origin-badge {
   font-size: 12px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--trust-blue);
 }
 
@@ -1116,8 +1113,7 @@
   border-radius: var(--radius-full);
   font-size: 11.5px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .profile-status-pill.registered {
@@ -1853,9 +1849,8 @@
   font-size: 12.5px;
   font-weight: 800;
   color: var(--nature-green);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 .spotlight-title {
@@ -2065,7 +2060,6 @@
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
   padding: 2px 10px;
   border-radius: var(--radius-full);
   margin-bottom: 8px;
@@ -2230,7 +2224,6 @@
   font-size: 12.5px;
   font-weight: 700;
   color: var(--nature-green);
-  text-transform: uppercase;
 }
 
 .nav-q-title {
